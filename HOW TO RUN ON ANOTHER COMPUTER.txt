@@ -1,0 +1,15 @@
+D&D Character Builder portable setup
+
+1. Copy the zip file to the other Windows computer.
+2. Extract the whole zip folder before running anything.
+3. If Python is not installed, install Python 3.11 or newer from:
+   https://www.python.org/downloads/
+   During install, check "Add python.exe to PATH".
+4. Double-click "Setup First Time.cmd".
+5. When setup finishes, double-click "Start Character Builder.cmd".
+
+You only need to run "Setup First Time.cmd" once per computer.
+The first setup needs internet access so Python can install the app packages.
+After that, use "Start Character Builder.cmd" whenever you want to open the app.
+
+Keep the command window open while using the app. Close that window when you want to stop it.

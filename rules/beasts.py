@@ -1,0 +1,45 @@
+BEAST_CATALOG = [
+    {"id": "cat_xmm", "name": "Cat", "creature_type": "Beast", "challenge_rating": 0, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "deer_xmm", "name": "Deer", "creature_type": "Beast", "challenge_rating": 0, "speeds": {"walk": 50}, "source": "XMM"},
+    {"id": "frog_xmm", "name": "Frog", "creature_type": "Beast", "challenge_rating": 0, "speeds": {"walk": 20, "swim": 20}, "source": "XMM"},
+    {"id": "goat_xmm", "name": "Goat", "creature_type": "Beast", "challenge_rating": 0, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "hawk_xmm", "name": "Hawk", "creature_type": "Beast", "challenge_rating": 0, "speeds": {"walk": 10, "fly": 60}, "source": "XMM"},
+    {"id": "rat_xmm", "name": "Rat", "creature_type": "Beast", "challenge_rating": 0, "speeds": {"walk": 20}, "source": "XMM"},
+    {"id": "spider_xmm", "name": "Spider", "creature_type": "Beast", "challenge_rating": 0, "speeds": {"walk": 20, "climb": 20}, "source": "XMM"},
+    {"id": "weasel_xmm", "name": "Weasel", "creature_type": "Beast", "challenge_rating": 0, "speeds": {"walk": 30}, "source": "XMM"},
+    {"id": "mule_xmm", "name": "Mule", "creature_type": "Beast", "challenge_rating": 0.125, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "mastiff_xmm", "name": "Mastiff", "creature_type": "Beast", "challenge_rating": 0.125, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "pony_xmm", "name": "Pony", "creature_type": "Beast", "challenge_rating": 0.125, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "draft_horse_xmm", "name": "Draft Horse", "creature_type": "Beast", "challenge_rating": 0.25, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "riding_horse_xmm", "name": "Riding Horse", "creature_type": "Beast", "challenge_rating": 0.25, "speeds": {"walk": 60}, "source": "XMM"},
+    {"id": "wolf_xmm", "name": "Wolf", "creature_type": "Beast", "challenge_rating": 0.25, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "ape_xmm", "name": "Ape", "creature_type": "Beast", "challenge_rating": 0.5, "speeds": {"walk": 30, "climb": 30}, "source": "XMM"},
+    {"id": "black_bear_xmm", "name": "Black Bear", "creature_type": "Beast", "challenge_rating": 0.5, "speeds": {"walk": 40, "climb": 30}, "source": "XMM"},
+    {"id": "crocodile_xmm", "name": "Crocodile", "creature_type": "Beast", "challenge_rating": 0.5, "speeds": {"walk": 20, "swim": 30}, "source": "XMM"},
+    {"id": "giant_goat_xmm", "name": "Giant Goat", "creature_type": "Beast", "challenge_rating": 0.5, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "brown_bear_xmm", "name": "Brown Bear", "creature_type": "Beast", "challenge_rating": 1, "speeds": {"walk": 40, "climb": 30}, "source": "XMM"},
+    {"id": "dire_wolf_xmm", "name": "Dire Wolf", "creature_type": "Beast", "challenge_rating": 1, "speeds": {"walk": 50}, "source": "XMM"},
+    {"id": "giant_eagle_xmm", "name": "Giant Eagle", "creature_type": "Beast", "challenge_rating": 1, "speeds": {"walk": 10, "fly": 80}, "source": "XMM"},
+    {"id": "giant_spider_xmm", "name": "Giant Spider", "creature_type": "Beast", "challenge_rating": 1, "speeds": {"walk": 30, "climb": 30}, "source": "XMM"},
+    {"id": "giant_toad_xmm", "name": "Giant Toad", "creature_type": "Beast", "challenge_rating": 1, "speeds": {"walk": 20, "swim": 40}, "source": "XMM"},
+    {"id": "lion_xmm", "name": "Lion", "creature_type": "Beast", "challenge_rating": 1, "speeds": {"walk": 50}, "source": "XMM"},
+    {"id": "tiger_xmm", "name": "Tiger", "creature_type": "Beast", "challenge_rating": 1, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "polar_bear_xmm", "name": "Polar Bear", "creature_type": "Beast", "challenge_rating": 2, "speeds": {"walk": 40, "swim": 30}, "source": "XMM"},
+    {"id": "rhinoceros_xmm", "name": "Rhinoceros", "creature_type": "Beast", "challenge_rating": 2, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "saber_toothed_tiger_xmm", "name": "Saber-Toothed Tiger", "creature_type": "Beast", "challenge_rating": 2, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "giant_constrictor_snake_xmm", "name": "Giant Constrictor Snake", "creature_type": "Beast", "challenge_rating": 2, "speeds": {"walk": 30, "swim": 30}, "source": "XMM"},
+    {"id": "ankylosaurus_xmm", "name": "Ankylosaurus", "creature_type": "Beast", "challenge_rating": 3, "speeds": {"walk": 30}, "source": "XMM"},
+    {"id": "giant_scorpion_xmm", "name": "Giant Scorpion", "creature_type": "Beast", "challenge_rating": 3, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "killer_whale_xmm", "name": "Killer Whale", "creature_type": "Beast", "challenge_rating": 3, "speeds": {"swim": 60}, "source": "XMM"},
+    {"id": "elephant_xmm", "name": "Elephant", "creature_type": "Beast", "challenge_rating": 4, "speeds": {"walk": 40}, "source": "XMM"},
+    {"id": "giant_crocodile_xmm", "name": "Giant Crocodile", "creature_type": "Beast", "challenge_rating": 5, "speeds": {"walk": 30, "swim": 50}, "source": "XMM"},
+    {"id": "mammoth_xmm", "name": "Mammoth", "creature_type": "Beast", "challenge_rating": 6, "speeds": {"walk": 40}, "source": "XMM"},
+]
+
+
+def beast_catalog():
+    return [dict(beast) for beast in BEAST_CATALOG]
+
+
+def beast_has_fly_speed(beast):
+    return int(beast.get("speeds", {}).get("fly", 0) or 0) > 0

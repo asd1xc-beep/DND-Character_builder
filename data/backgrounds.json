@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Acolyte",
+    "skill_proficiencies": ["Insight", "Religion"],
+    "tool_proficiencies": [],
+    "languages": ["Two extra languages"],
+    "feature": "Shelter of the Faithful",
+    "equipment": ["Holy Symbol", "Prayer Book", "Vestments"]
+  },
+  {
+    "name": "Soldier",
+    "skill_proficiencies": ["Athletics", "Intimidation"],
+    "tool_proficiencies": ["Gaming Set"],
+    "languages": [],
+    "feature": "Military Rank",
+    "equipment": ["Gaming Set", "Insignia", "Traveler's Clothes"]
+  },
+  {
+    "name": "Criminal",
+    "skill_proficiencies": ["Deception", "Stealth"],
+    "tool_proficiencies": ["Thieves' Tools", "Gaming Set"],
+    "languages": [],
+    "feature": "Criminal Contact",
+    "equipment": ["Crowbar", "Dark Common Clothes"]
+  },
+  {
+    "name": "Sage",
+    "skill_proficiencies": ["Arcana", "History"],
+    "tool_proficiencies": [],
+    "languages": ["Two extra languages"],
+    "feature": "Researcher",
+    "equipment": ["Bottle of Ink", "Quill", "Parchment", "Scholar's Robes"]
+  }
+]

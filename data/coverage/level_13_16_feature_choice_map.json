@@ -1,0 +1,3847 @@
+{
+  "generated_from": "data/imported/5etools/classes.json",
+  "level_range": [
+    13,
+    16
+  ],
+  "summary": {
+    "class_level_count": 48,
+    "subclass_feature_count": 52,
+    "required_choice_count": 57,
+    "blocking_choice_count": 0,
+    "generic_ready_choice_count": 57
+  },
+  "blocking_items": [],
+  "generic_ready_items": [
+    "barbarian_13_ritual_caster_bonus_spells",
+    "barbarian_14_subclass_feature",
+    "barbarian_16_ability_score_improvement",
+    "bard_13_ritual_caster_bonus_spells",
+    "bard_13_spell_progression",
+    "bard_14_subclass_feature",
+    "bard_15_spell_progression",
+    "bard_16_ability_score_improvement",
+    "cleric_13_ritual_caster_bonus_spells",
+    "cleric_13_spell_progression",
+    "cleric_15_spell_progression",
+    "cleric_16_ability_score_improvement",
+    "druid_13_ritual_caster_bonus_spells",
+    "druid_13_spell_progression",
+    "druid_14_subclass_feature",
+    "druid_15_spell_progression",
+    "druid_16_ability_score_improvement",
+    "fighter_13_ritual_caster_bonus_spells",
+    "fighter_14_ability_score_improvement",
+    "fighter_15_subclass_feature",
+    "fighter_16_ability_score_improvement",
+    "fighter_16_weapon_mastery",
+    "monk_13_ritual_caster_bonus_spells",
+    "monk_16_ability_score_improvement",
+    "paladin_13_ritual_caster_bonus_spells",
+    "paladin_13_spell_progression",
+    "paladin_15_spell_progression",
+    "paladin_15_subclass_feature",
+    "paladin_16_ability_score_improvement",
+    "ranger_13_ritual_caster_bonus_spells",
+    "ranger_13_spell_progression",
+    "ranger_15_spell_progression",
+    "ranger_15_subclass_feature",
+    "ranger_16_ability_score_improvement",
+    "rogue_13_ritual_caster_bonus_spells",
+    "rogue_13_subclass_feature",
+    "rogue_16_ability_score_improvement",
+    "sorcerer_13_ritual_caster_bonus_spells",
+    "sorcerer_13_spell_progression",
+    "sorcerer_14_subclass_feature",
+    "sorcerer_15_spell_progression",
+    "sorcerer_16_ability_score_improvement",
+    "warlock_13_mystic_arcanum",
+    "warlock_13_ritual_caster_bonus_spells",
+    "warlock_13_spell_progression",
+    "warlock_14_subclass_feature",
+    "warlock_15_eldritch_invocations",
+    "warlock_15_mystic_arcanum",
+    "warlock_15_spell_progression",
+    "warlock_16_ability_score_improvement",
+    "wizard_13_ritual_caster_bonus_spells",
+    "wizard_13_spell_progression",
+    "wizard_14_spell_progression",
+    "wizard_14_subclass_feature",
+    "wizard_15_spell_progression",
+    "wizard_16_ability_score_improvement",
+    "wizard_16_spell_progression"
+  ],
+  "recommended_order": [
+    "Verify level 13-16 spell progression, Wizard spellbook gains, Ritual Caster scaling, and high-level PDF spell placement.",
+    "Review automatic class/subclass features for hidden sheet-value effects.",
+    "Enable levels 13-16 and add end-to-end level-up tests."
+  ],
+  "class_levels": {
+    "barbarian_13": {
+      "id": "barbarian_13",
+      "class": "Barbarian",
+      "level": 13,
+      "features": [
+        "Improved Brutal Strike"
+      ],
+      "feature_entries": [
+        {
+          "id": "barbarian_13_improved_brutal_strike",
+          "name": "Improved Brutal Strike",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "feature_upgrade",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "barbarian_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "barbarian_14": {
+      "id": "barbarian_14",
+      "class": "Barbarian",
+      "level": 14,
+      "features": [
+        "Subclass Feature"
+      ],
+      "feature_entries": [
+        {
+          "id": "barbarian_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "barbarian_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "barbarian_berserker_14",
+          "class": "Barbarian",
+          "subclass": "Path of the Berserker",
+          "level": 14,
+          "features": [
+            "Intimidating Presence"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Intimidating Presence",
+              "classification": "resource_progression",
+              "handler": "services.character_engine.subclass_resources"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.subclass_resources",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "barbarian_wild_heart_14",
+          "class": "Barbarian",
+          "subclass": "Path of the Wild Heart",
+          "level": 14,
+          "features": [
+            "Power of the Wilds"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Power of the Wilds",
+              "classification": "feature_upgrade",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "barbarian_world_tree_14",
+          "class": "Barbarian",
+          "subclass": "Path of the World Tree",
+          "level": 14,
+          "features": [
+            "Travel Along the Tree"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Travel Along the Tree",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "barbarian_zealot_14",
+          "class": "Barbarian",
+          "subclass": "Path of the Zealot",
+          "level": 14,
+          "features": [
+            "Rage of the Gods"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Rage of the Gods",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "barbarian_15": {
+      "id": "barbarian_15",
+      "class": "Barbarian",
+      "level": 15,
+      "features": [
+        "Persistent Rage"
+      ],
+      "feature_entries": [
+        {
+          "id": "barbarian_15_persistent_rage",
+          "name": "Persistent Rage",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "active_play_description_only",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "barbarian_16": {
+      "id": "barbarian_16",
+      "class": "Barbarian",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "barbarian_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "barbarian_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {
+        "rage_damage": {
+          "before": 3,
+          "after": 4
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "bard_13": {
+      "id": "bard_13",
+      "class": "Bard",
+      "level": 13,
+      "features": [],
+      "feature_entries": [],
+      "required_choices": [
+        {
+          "id": "bard_13_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 16,
+              "after": 17
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "bard_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 16,
+          "after": 17
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1
+          }
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "bard_14": {
+      "id": "bard_14",
+      "class": "Bard",
+      "level": 14,
+      "features": [
+        "Subclass Feature"
+      ],
+      "feature_entries": [
+        {
+          "id": "bard_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "bard_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "bard_dance_14",
+          "class": "Bard",
+          "subclass": "College of Dance",
+          "level": 14,
+          "features": [
+            "Leading Evasion"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Leading Evasion",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "bard_glamour_14",
+          "class": "Bard",
+          "subclass": "College of Glamour",
+          "level": 14,
+          "features": [
+            "Unbreakable Majesty"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Unbreakable Majesty",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "bard_lore_14",
+          "class": "Bard",
+          "subclass": "College of Lore",
+          "level": 14,
+          "features": [
+            "Peerless Skill"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Peerless Skill",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "bard_valor_14",
+          "class": "Bard",
+          "subclass": "College of Valor",
+          "level": 14,
+          "features": [
+            "Battle Magic"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Battle Magic",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "bard_15": {
+      "id": "bard_15",
+      "class": "Bard",
+      "level": 15,
+      "features": [],
+      "feature_entries": [],
+      "required_choices": [
+        {
+          "id": "bard_15_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 17,
+              "after": 18
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1,
+                "8": 1
+              }
+            }
+          }
+        }
+      ],
+      "resource_changes": {
+        "bardic_die": {
+          "before": "1d10",
+          "after": "1d12"
+        }
+      },
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 17,
+          "after": 18
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1,
+            "8": 1
+          }
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "bard_16": {
+      "id": "bard_16",
+      "class": "Bard",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "bard_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "bard_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "cleric_13": {
+      "id": "cleric_13",
+      "class": "Cleric",
+      "level": 13,
+      "features": [],
+      "feature_entries": [],
+      "required_choices": [
+        {
+          "id": "cleric_13_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 16,
+              "after": 17
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "cleric_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 16,
+          "after": 17
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1
+          }
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "cleric_14": {
+      "id": "cleric_14",
+      "class": "Cleric",
+      "level": 14,
+      "features": [
+        "Improved Blessed Strikes"
+      ],
+      "feature_entries": [
+        {
+          "id": "cleric_14_improved_blessed_strikes",
+          "name": "Improved Blessed Strikes",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "feature_upgrade",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "cleric_15": {
+      "id": "cleric_15",
+      "class": "Cleric",
+      "level": 15,
+      "features": [],
+      "feature_entries": [],
+      "required_choices": [
+        {
+          "id": "cleric_15_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 17,
+              "after": 18
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1,
+                "8": 1
+              }
+            }
+          }
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 17,
+          "after": 18
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1,
+            "8": 1
+          }
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "cleric_16": {
+      "id": "cleric_16",
+      "class": "Cleric",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "cleric_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "cleric_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "druid_13": {
+      "id": "druid_13",
+      "class": "Druid",
+      "level": 13,
+      "features": [],
+      "feature_entries": [],
+      "required_choices": [
+        {
+          "id": "druid_13_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 16,
+              "after": 17
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "druid_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 16,
+          "after": 17
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1
+          }
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "druid_14": {
+      "id": "druid_14",
+      "class": "Druid",
+      "level": 14,
+      "features": [
+        "Subclass Feature"
+      ],
+      "feature_entries": [
+        {
+          "id": "druid_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "druid_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "druid_land_14",
+          "class": "Druid",
+          "subclass": "Circle of the Land",
+          "level": 14,
+          "features": [
+            "Nature's Sanctuary"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Nature's Sanctuary",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "druid_moon_14",
+          "class": "Druid",
+          "subclass": "Circle of the Moon",
+          "level": 14,
+          "features": [
+            "Lunar Form"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Lunar Form",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "druid_sea_14",
+          "class": "Druid",
+          "subclass": "Circle of the Sea",
+          "level": 14,
+          "features": [
+            "Oceanic Gift"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Oceanic Gift",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "druid_stars_14",
+          "class": "Druid",
+          "subclass": "Circle of the Stars",
+          "level": 14,
+          "features": [
+            "Full of Stars"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Full of Stars",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "druid_15": {
+      "id": "druid_15",
+      "class": "Druid",
+      "level": 15,
+      "features": [
+        "Improved Elemental Fury"
+      ],
+      "feature_entries": [
+        {
+          "id": "druid_15_improved_elemental_fury",
+          "name": "Improved Elemental Fury",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "feature_upgrade",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "druid_15_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 17,
+              "after": 18
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1,
+                "8": 1
+              }
+            }
+          }
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 17,
+          "after": 18
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1,
+            "8": 1
+          }
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "druid_16": {
+      "id": "druid_16",
+      "class": "Druid",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "druid_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "druid_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "fighter_13": {
+      "id": "fighter_13",
+      "class": "Fighter",
+      "level": 13,
+      "features": [
+        "Indomitable",
+        "Studied Attacks"
+      ],
+      "feature_entries": [
+        {
+          "id": "fighter_13_indomitable",
+          "name": "Indomitable",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "resource_progression",
+          "handler": "services.character_engine.calculate_class_resources",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        },
+        {
+          "id": "fighter_13_studied_attacks",
+          "name": "Studied Attacks",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "active_play_description_only",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "fighter_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "fighter_psi_warrior_13",
+          "class": "Fighter",
+          "subclass": "Psi Warrior",
+          "level": 13,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [],
+          "resources": {
+            "psionic_energy_die": "d10",
+            "psionic_energy_dice": 10
+          },
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "fighter_14": {
+      "id": "fighter_14",
+      "class": "Fighter",
+      "level": 14,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "fighter_14_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "fighter_14_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "fighter_psi_warrior_14",
+          "class": "Fighter",
+          "subclass": "Psi Warrior",
+          "level": 14,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [],
+          "resources": {
+            "psionic_energy_die": "d10",
+            "psionic_energy_dice": 10
+          },
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "fighter_15": {
+      "id": "fighter_15",
+      "class": "Fighter",
+      "level": 15,
+      "features": [
+        "Subclass Feature"
+      ],
+      "feature_entries": [
+        {
+          "id": "fighter_15_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "fighter_15_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "fighter_battle_master_15",
+          "class": "Fighter",
+          "subclass": "Battle Master",
+          "level": 15,
+          "features": [
+            "Relentless"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Relentless",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "fighter_champion_15",
+          "class": "Fighter",
+          "subclass": "Champion",
+          "level": 15,
+          "features": [
+            "Superior Critical"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Superior Critical",
+              "classification": "feature_upgrade",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "fighter_eldritch_knight_15",
+          "class": "Fighter",
+          "subclass": "Eldritch Knight",
+          "level": 15,
+          "features": [
+            "Arcane Charge"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Arcane Charge",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "fighter_psi_warrior_15",
+          "class": "Fighter",
+          "subclass": "Psi Warrior",
+          "level": 15,
+          "features": [
+            "Bulwark of Force"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Bulwark of Force",
+              "classification": "resource_progression",
+              "handler": "services.character_engine.subclass_resources"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {
+            "psionic_energy_die": "d10",
+            "psionic_energy_dice": 10
+          },
+          "status": "generic_ready",
+          "handler": "services.character_engine.subclass_resources",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "fighter_16": {
+      "id": "fighter_16",
+      "class": "Fighter",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "fighter_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "fighter_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        },
+        {
+          "id": "fighter_16_weapon_mastery",
+          "name": "Weapon Mastery",
+          "feature_type": "resource_delta",
+          "choice_type": "weapon_mastery_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.weapon_mastery_level_up_choice",
+          "blocks_level_path": false,
+          "notes": "Weapon Mastery count increases from 5 to 6."
+        }
+      ],
+      "resource_changes": {
+        "weapon_mastery_count": {
+          "before": 5,
+          "after": 6
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "fighter_psi_warrior_16",
+          "class": "Fighter",
+          "subclass": "Psi Warrior",
+          "level": 16,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [],
+          "resources": {
+            "psionic_energy_die": "d10",
+            "psionic_energy_dice": 10
+          },
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "monk_13": {
+      "id": "monk_13",
+      "class": "Monk",
+      "level": 13,
+      "features": [
+        "Deflect Energy"
+      ],
+      "feature_entries": [
+        {
+          "id": "monk_13_deflect_energy",
+          "name": "Deflect Energy",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "active_play_description_only",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "monk_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {
+        "focus_points": {
+          "before": 12,
+          "after": 13
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "monk_14": {
+      "id": "monk_14",
+      "class": "Monk",
+      "level": 14,
+      "features": [
+        "Disciplined Survivor"
+      ],
+      "feature_entries": [
+        {
+          "id": "monk_14_disciplined_survivor",
+          "name": "Disciplined Survivor",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "proficiency_grant",
+          "handler": "services.character_engine.class_feature_saving_throw_proficiencies",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [],
+      "resource_changes": {
+        "focus_points": {
+          "before": 13,
+          "after": 14
+        },
+        "unarmored_movement": {
+          "before": 20,
+          "after": 25
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "monk_15": {
+      "id": "monk_15",
+      "class": "Monk",
+      "level": 15,
+      "features": [
+        "Perfect Focus"
+      ],
+      "feature_entries": [
+        {
+          "id": "monk_15_perfect_focus",
+          "name": "Perfect Focus",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "active_play_description_only",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [],
+      "resource_changes": {
+        "focus_points": {
+          "before": 14,
+          "after": 15
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "monk_16": {
+      "id": "monk_16",
+      "class": "Monk",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "monk_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "monk_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {
+        "focus_points": {
+          "before": 15,
+          "after": 16
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "paladin_13": {
+      "id": "paladin_13",
+      "class": "Paladin",
+      "level": 13,
+      "features": [],
+      "feature_entries": [],
+      "required_choices": [
+        {
+          "id": "paladin_13_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 10,
+              "after": 11
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "paladin_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {
+        "lay_on_hands_pool": {
+          "before": 60,
+          "after": 65
+        }
+      },
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 10,
+          "after": 11
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 1
+          }
+        }
+      },
+      "subclass_features": [
+        {
+          "id": "paladin_devotion_13",
+          "class": "Paladin",
+          "subclass": "Oath of Devotion",
+          "level": 13,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [
+            "Freedom of Movement",
+            "Guardian of Faith"
+          ],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        },
+        {
+          "id": "paladin_glory_13",
+          "class": "Paladin",
+          "subclass": "Oath of Glory",
+          "level": 13,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [
+            "Compulsion",
+            "Freedom of Movement"
+          ],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        },
+        {
+          "id": "paladin_vengeance_13",
+          "class": "Paladin",
+          "subclass": "Oath of Vengeance",
+          "level": 13,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [
+            "Banishment",
+            "Dimension Door"
+          ],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        },
+        {
+          "id": "paladin_ancients_13",
+          "class": "Paladin",
+          "subclass": "Oath of the Ancients",
+          "level": 13,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [
+            "Ice Storm",
+            "Stoneskin"
+          ],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "paladin_14": {
+      "id": "paladin_14",
+      "class": "Paladin",
+      "level": 14,
+      "features": [
+        "Restoring Touch"
+      ],
+      "feature_entries": [
+        {
+          "id": "paladin_14_restoring_touch",
+          "name": "Restoring Touch",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "active_play_description_only",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [],
+      "resource_changes": {
+        "lay_on_hands_pool": {
+          "before": 65,
+          "after": 70
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "paladin_15": {
+      "id": "paladin_15",
+      "class": "Paladin",
+      "level": 15,
+      "features": [
+        "Subclass Feature"
+      ],
+      "feature_entries": [
+        {
+          "id": "paladin_15_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "paladin_15_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        },
+        {
+          "id": "paladin_15_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 11,
+              "after": 12
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              }
+            }
+          }
+        }
+      ],
+      "resource_changes": {
+        "lay_on_hands_pool": {
+          "before": 70,
+          "after": 75
+        }
+      },
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 11,
+          "after": 12
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        }
+      },
+      "subclass_features": [
+        {
+          "id": "paladin_devotion_15",
+          "class": "Paladin",
+          "subclass": "Oath of Devotion",
+          "level": 15,
+          "features": [
+            "Smite of Protection"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Smite of Protection",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "paladin_glory_15",
+          "class": "Paladin",
+          "subclass": "Oath of Glory",
+          "level": 15,
+          "features": [
+            "Glorious Defense"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Glorious Defense",
+              "classification": "resource_progression",
+              "handler": "services.character_engine.subclass_resources"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.subclass_resources",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "paladin_vengeance_15",
+          "class": "Paladin",
+          "subclass": "Oath of Vengeance",
+          "level": 15,
+          "features": [
+            "Soul of Vengeance"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Soul of Vengeance",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "paladin_ancients_15",
+          "class": "Paladin",
+          "subclass": "Oath of the Ancients",
+          "level": 15,
+          "features": [
+            "Undying Sentinel"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Undying Sentinel",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "paladin_16": {
+      "id": "paladin_16",
+      "class": "Paladin",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "paladin_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "paladin_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {
+        "lay_on_hands_pool": {
+          "before": 75,
+          "after": 80
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "ranger_13": {
+      "id": "ranger_13",
+      "class": "Ranger",
+      "level": 13,
+      "features": [
+        "Relentless Hunter"
+      ],
+      "feature_entries": [
+        {
+          "id": "ranger_13_relentless_hunter",
+          "name": "Relentless Hunter",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "active_play_description_only",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "ranger_13_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 10,
+              "after": 11
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "ranger_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {
+        "favored_enemy": {
+          "before": 4,
+          "after": 5
+        }
+      },
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 10,
+          "after": 11
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 1
+          }
+        }
+      },
+      "subclass_features": [
+        {
+          "id": "ranger_fey_wanderer_13",
+          "class": "Ranger",
+          "subclass": "Fey Wanderer",
+          "level": 13,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [
+            "Dimension Door"
+          ],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        },
+        {
+          "id": "ranger_gloom_stalker_13",
+          "class": "Ranger",
+          "subclass": "Gloom Stalker",
+          "level": 13,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [
+            "Greater Invisibility"
+          ],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "ranger_14": {
+      "id": "ranger_14",
+      "class": "Ranger",
+      "level": 14,
+      "features": [
+        "Nature's Veil"
+      ],
+      "feature_entries": [
+        {
+          "id": "ranger_14_nature_s_veil",
+          "name": "Nature's Veil",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "resource_progression",
+          "handler": "services.character_engine.calculate_class_resources",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "ranger_15": {
+      "id": "ranger_15",
+      "class": "Ranger",
+      "level": 15,
+      "features": [
+        "Subclass Feature"
+      ],
+      "feature_entries": [
+        {
+          "id": "ranger_15_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "ranger_15_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        },
+        {
+          "id": "ranger_15_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 11,
+              "after": 12
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              }
+            }
+          }
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 11,
+          "after": 12
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        }
+      },
+      "subclass_features": [
+        {
+          "id": "ranger_beast_master_15",
+          "class": "Ranger",
+          "subclass": "Beast Master",
+          "level": 15,
+          "features": [
+            "Share Spells"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Share Spells",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "ranger_fey_wanderer_15",
+          "class": "Ranger",
+          "subclass": "Fey Wanderer",
+          "level": 15,
+          "features": [
+            "Misty Wanderer"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Misty Wanderer",
+              "classification": "spell_grant",
+              "handler": "rules.feature_spell_grants.feature_spell_grant_records"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "rules.feature_spell_grants.feature_spell_grant_records",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "ranger_gloom_stalker_15",
+          "class": "Ranger",
+          "subclass": "Gloom Stalker",
+          "level": 15,
+          "features": [
+            "Shadowy Dodge"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Shadowy Dodge",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "ranger_hunter_15",
+          "class": "Ranger",
+          "subclass": "Hunter",
+          "level": 15,
+          "features": [
+            "Superior Hunter's Defense"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Superior Hunter's Defense",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "ranger_16": {
+      "id": "ranger_16",
+      "class": "Ranger",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "ranger_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "ranger_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "rogue_13": {
+      "id": "rogue_13",
+      "class": "Rogue",
+      "level": 13,
+      "features": [
+        "Subclass Feature"
+      ],
+      "feature_entries": [
+        {
+          "id": "rogue_13_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "rogue_13_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        },
+        {
+          "id": "rogue_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {
+        "sneak_attack": {
+          "before": "6d6",
+          "after": "7d6"
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "rogue_arcane_trickster_13",
+          "class": "Rogue",
+          "subclass": "Arcane Trickster",
+          "level": 13,
+          "features": [
+            "Versatile Trickster"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Versatile Trickster",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "rogue_assassin_13",
+          "class": "Rogue",
+          "subclass": "Assassin",
+          "level": 13,
+          "features": [
+            "Envenom Weapons"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Envenom Weapons",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "rogue_soulknife_13",
+          "class": "Rogue",
+          "subclass": "Soulknife",
+          "level": 13,
+          "features": [
+            "Psychic Veil"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Psychic Veil",
+              "classification": "resource_progression",
+              "handler": "services.character_engine.subclass_resources"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {
+            "psionic_energy_die": "d10",
+            "psionic_energy_dice": 10
+          },
+          "status": "generic_ready",
+          "handler": "services.character_engine.subclass_resources",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        },
+        {
+          "id": "rogue_thief_13",
+          "class": "Rogue",
+          "subclass": "Thief",
+          "level": 13,
+          "features": [
+            "Use Magic Device"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Use Magic Device",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "rogue_14": {
+      "id": "rogue_14",
+      "class": "Rogue",
+      "level": 14,
+      "features": [
+        "Devious Strikes"
+      ],
+      "feature_entries": [
+        {
+          "id": "rogue_14_devious_strikes",
+          "name": "Devious Strikes",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "feature_reference",
+          "handler": "services.character_engine.related_features_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "rogue_soulknife_14",
+          "class": "Rogue",
+          "subclass": "Soulknife",
+          "level": 14,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [],
+          "resources": {
+            "psionic_energy_die": "d10",
+            "psionic_energy_dice": 10
+          },
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "rogue_15": {
+      "id": "rogue_15",
+      "class": "Rogue",
+      "level": 15,
+      "features": [
+        "Slippery Mind"
+      ],
+      "feature_entries": [
+        {
+          "id": "rogue_15_slippery_mind",
+          "name": "Slippery Mind",
+          "feature_type": "automatic_feature",
+          "choice_type": "none",
+          "status": "audited_automatic",
+          "classification": "proficiency_grant",
+          "handler": "services.character_engine.class_feature_saving_throw_proficiencies",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature is explicitly classified for the enabled level band."
+        }
+      ],
+      "required_choices": [],
+      "resource_changes": {
+        "sneak_attack": {
+          "before": "7d6",
+          "after": "8d6"
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "rogue_soulknife_15",
+          "class": "Rogue",
+          "subclass": "Soulknife",
+          "level": 15,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [],
+          "resources": {
+            "psionic_energy_die": "d10",
+            "psionic_energy_dice": 10
+          },
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "rogue_16": {
+      "id": "rogue_16",
+      "class": "Rogue",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "rogue_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "rogue_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "rogue_soulknife_16",
+          "class": "Rogue",
+          "subclass": "Soulknife",
+          "level": 16,
+          "features": [],
+          "feature_classifications": [],
+          "spell_grants": [],
+          "resources": {
+            "psionic_energy_die": "d10",
+            "psionic_energy_dice": 10
+          },
+          "status": "generic_ready",
+          "handler": "rules.leveling.get_active_subclass_grants",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Spell grants/resources are represented in normalized subclass grants.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "sorcerer_13": {
+      "id": "sorcerer_13",
+      "class": "Sorcerer",
+      "level": 13,
+      "features": [],
+      "feature_entries": [],
+      "required_choices": [
+        {
+          "id": "sorcerer_13_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 16,
+              "after": 17
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "sorcerer_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {
+        "sorcery_points": {
+          "before": 12,
+          "after": 13
+        }
+      },
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 16,
+          "after": 17
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1
+          }
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "sorcerer_14": {
+      "id": "sorcerer_14",
+      "class": "Sorcerer",
+      "level": 14,
+      "features": [
+        "Subclass Feature"
+      ],
+      "feature_entries": [
+        {
+          "id": "sorcerer_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "sorcerer_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "resource_changes": {
+        "sorcery_points": {
+          "before": 13,
+          "after": 14
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "sorcerer_aberrant_14",
+          "class": "Sorcerer",
+          "subclass": "Aberrant Sorcery",
+          "level": 14,
+          "features": [
+            "Revelation in Flesh"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Revelation in Flesh",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "sorcerer_clockwork_14",
+          "class": "Sorcerer",
+          "subclass": "Clockwork Sorcery",
+          "level": 14,
+          "features": [
+            "Trance of Order"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Trance of Order",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "sorcerer_draconic_14",
+          "class": "Sorcerer",
+          "subclass": "Draconic Sorcery",
+          "level": 14,
+          "features": [
+            "Dragon Wings"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Dragon Wings",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "sorcerer_wild_magic_14",
+          "class": "Sorcerer",
+          "subclass": "Wild Magic Sorcery",
+          "level": 14,
+          "features": [
+            "Controlled Chaos"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Controlled Chaos",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "sorcerer_15": {
+      "id": "sorcerer_15",
+      "class": "Sorcerer",
+      "level": 15,
+      "features": [],
+      "feature_entries": [],
+      "required_choices": [
+        {
+          "id": "sorcerer_15_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 17,
+              "after": 18
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1,
+                "8": 1
+              }
+            }
+          }
+        }
+      ],
+      "resource_changes": {
+        "sorcery_points": {
+          "before": 14,
+          "after": 15
+        }
+      },
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 17,
+          "after": 18
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1,
+            "8": 1
+          }
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "sorcerer_16": {
+      "id": "sorcerer_16",
+      "class": "Sorcerer",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "sorcerer_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "sorcerer_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {
+        "sorcery_points": {
+          "before": 15,
+          "after": 16
+        }
+      },
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "warlock_13": {
+      "id": "warlock_13",
+      "class": "Warlock",
+      "level": 13,
+      "features": [
+        "Mystic Arcanum"
+      ],
+      "feature_entries": [
+        {
+          "id": "warlock_13_mystic_arcanum",
+          "name": "Mystic Arcanum",
+          "feature_type": "automatic_feature",
+          "choice_type": "mystic_arcanum_spell_choice",
+          "status": "generic_ready",
+          "handler": "rules.mystic_arcanum.mystic_arcanum_options",
+          "blocks_level_path": false,
+          "notes": "Mystic Arcanum is handled as a level 7 Warlock Arcanum spell choice."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "warlock_13_mystic_arcanum",
+          "name": "Mystic Arcanum",
+          "feature_type": "automatic_feature",
+          "choice_type": "mystic_arcanum_spell_choice",
+          "status": "generic_ready",
+          "handler": "rules.mystic_arcanum.mystic_arcanum_options",
+          "blocks_level_path": false,
+          "notes": "Mystic Arcanum is handled as a level 7 Warlock Arcanum spell choice."
+        },
+        {
+          "id": "warlock_13_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 11,
+              "after": 12
+            }
+          }
+        },
+        {
+          "id": "warlock_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 11,
+          "after": 12
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "warlock_14": {
+      "id": "warlock_14",
+      "class": "Warlock",
+      "level": 14,
+      "features": [
+        "Subclass Feature"
+      ],
+      "feature_entries": [
+        {
+          "id": "warlock_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "warlock_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [
+        {
+          "id": "warlock_archfey_14",
+          "class": "Warlock",
+          "subclass": "Archfey Patron",
+          "level": 14,
+          "features": [
+            "Bewitching Magic"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Bewitching Magic",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "warlock_celestial_14",
+          "class": "Warlock",
+          "subclass": "Celestial Patron",
+          "level": 14,
+          "features": [
+            "Searing Vengeance"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Searing Vengeance",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "warlock_fiend_14",
+          "class": "Warlock",
+          "subclass": "Fiend Patron",
+          "level": 14,
+          "features": [
+            "Hurl Through Hell"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Hurl Through Hell",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "warlock_great_old_one_14",
+          "class": "Warlock",
+          "subclass": "Great Old One Patron",
+          "level": 14,
+          "features": [
+            "Create Thrall"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Create Thrall",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "warlock_15": {
+      "id": "warlock_15",
+      "class": "Warlock",
+      "level": 15,
+      "features": [
+        "Mystic Arcanum"
+      ],
+      "feature_entries": [
+        {
+          "id": "warlock_15_mystic_arcanum",
+          "name": "Mystic Arcanum",
+          "feature_type": "automatic_feature",
+          "choice_type": "mystic_arcanum_spell_choice",
+          "status": "generic_ready",
+          "handler": "rules.mystic_arcanum.mystic_arcanum_options",
+          "blocks_level_path": false,
+          "notes": "Mystic Arcanum is handled as a level 8 Warlock Arcanum spell choice."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "warlock_15_mystic_arcanum",
+          "name": "Mystic Arcanum",
+          "feature_type": "automatic_feature",
+          "choice_type": "mystic_arcanum_spell_choice",
+          "status": "generic_ready",
+          "handler": "rules.mystic_arcanum.mystic_arcanum_options",
+          "blocks_level_path": false,
+          "notes": "Mystic Arcanum is handled as a level 8 Warlock Arcanum spell choice."
+        },
+        {
+          "id": "warlock_15_eldritch_invocations",
+          "name": "Eldritch Invocations",
+          "feature_type": "resource_delta",
+          "choice_type": "invocation_choice",
+          "status": "generic_ready",
+          "handler": "rules.class_choice_rules.eldritch_invocations",
+          "blocks_level_path": false,
+          "notes": "Invocation count increases from 8 to 9."
+        },
+        {
+          "id": "warlock_15_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "prepared_spells": {
+              "before": 12,
+              "after": 13
+            }
+          }
+        }
+      ],
+      "resource_changes": {
+        "eldritch_invocations": {
+          "before": 8,
+          "after": 9
+        }
+      },
+      "spellcasting_changes": {
+        "prepared_spells": {
+          "before": 12,
+          "after": 13
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "warlock_16": {
+      "id": "warlock_16",
+      "class": "Warlock",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "warlock_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "warlock_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {},
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "wizard_13": {
+      "id": "wizard_13",
+      "class": "Wizard",
+      "level": 13,
+      "features": [],
+      "feature_entries": [],
+      "required_choices": [
+        {
+          "id": "wizard_13_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "known_spells": {
+              "before": 28,
+              "after": 30
+            },
+            "prepared_spells": {
+              "before": 16,
+              "after": 17
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "wizard_13_ritual_caster_bonus_spells",
+          "name": "Ritual Caster proficiency-bonus scaling",
+          "feature_type": "proficiency_bonus_delta",
+          "choice_type": "feat_spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.ritual_caster_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Proficiency bonus increases at level 13, so Ritual Caster may grant another ritual spell choice."
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "known_spells": {
+          "before": 28,
+          "after": 30
+        },
+        "prepared_spells": {
+          "before": 16,
+          "after": 17
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1
+          }
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "wizard_14": {
+      "id": "wizard_14",
+      "class": "Wizard",
+      "level": 14,
+      "features": [
+        "Subclass Feature"
+      ],
+      "feature_entries": [
+        {
+          "id": "wizard_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "wizard_14_subclass_feature",
+          "name": "Subclass Feature",
+          "feature_type": "subclass_choice",
+          "choice_type": "subclass_feature_gain",
+          "status": "generic_ready",
+          "handler": "rules.level_up.classify_level_features",
+          "blocks_level_path": false,
+          "notes": "Existing later-subclass-feature handling should turn this into the selected subclass features."
+        },
+        {
+          "id": "wizard_14_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "known_spells": {
+              "before": 30,
+              "after": 32
+            },
+            "prepared_spells": {
+              "before": 17,
+              "after": 18
+            }
+          }
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "known_spells": {
+          "before": 30,
+          "after": 32
+        },
+        "prepared_spells": {
+          "before": 17,
+          "after": 18
+        }
+      },
+      "subclass_features": [
+        {
+          "id": "wizard_abjurer_14",
+          "class": "Wizard",
+          "subclass": "Abjurer",
+          "level": 14,
+          "features": [
+            "Spell Resistance"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Spell Resistance",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "wizard_diviner_14",
+          "class": "Wizard",
+          "subclass": "Diviner",
+          "level": 14,
+          "features": [
+            "Greater Portent"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Greater Portent",
+              "classification": "resource_progression",
+              "handler": "services.character_engine.subclass_resources"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.subclass_resources",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "wizard_evoker_14",
+          "class": "Wizard",
+          "subclass": "Evoker",
+          "level": 14,
+          "features": [
+            "Overchannel"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Overchannel",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        },
+        {
+          "id": "wizard_illusionist_14",
+          "class": "Wizard",
+          "subclass": "Illusionist",
+          "level": 14,
+          "features": [
+            "Illusory Reality"
+          ],
+          "feature_classifications": [
+            {
+              "name": "Illusory Reality",
+              "classification": "active_play_description_only",
+              "handler": "services.character_engine.feature_descriptions_for_character"
+            }
+          ],
+          "spell_grants": [],
+          "resources": {},
+          "status": "generic_ready",
+          "handler": "services.character_engine.feature_descriptions_for_character",
+          "handler_verified": true,
+          "blocks_level_path": false,
+          "notes": "Feature text is explicitly classified for the enabled level band.",
+          "unsupported_features": []
+        }
+      ],
+      "blocks_level_path": false
+    },
+    "wizard_15": {
+      "id": "wizard_15",
+      "class": "Wizard",
+      "level": 15,
+      "features": [],
+      "feature_entries": [],
+      "required_choices": [
+        {
+          "id": "wizard_15_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "known_spells": {
+              "before": 32,
+              "after": 34
+            },
+            "prepared_spells": {
+              "before": 18,
+              "after": 19
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1,
+                "7": 1,
+                "8": 1
+              }
+            }
+          }
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "known_spells": {
+          "before": 32,
+          "after": 34
+        },
+        "prepared_spells": {
+          "before": 18,
+          "after": 19
+        },
+        "spell_slots": {
+          "before": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1
+          },
+          "after": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 3,
+            "5": 2,
+            "6": 1,
+            "7": 1,
+            "8": 1
+          }
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    },
+    "wizard_16": {
+      "id": "wizard_16",
+      "class": "Wizard",
+      "level": 16,
+      "features": [
+        "Ability Score Improvement"
+      ],
+      "feature_entries": [
+        {
+          "id": "wizard_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        }
+      ],
+      "required_choices": [
+        {
+          "id": "wizard_16_ability_score_improvement",
+          "name": "Ability Score Improvement",
+          "feature_type": "asi_or_feat",
+          "choice_type": "asi_or_feat",
+          "status": "generic_ready",
+          "handler": "rules.level_up.asi_or_feat",
+          "blocks_level_path": false,
+          "notes": "Existing ASI/general feat handler can be reused when this level is enabled."
+        },
+        {
+          "id": "wizard_16_spell_progression",
+          "name": "Spellcasting progression",
+          "feature_type": "progression_delta",
+          "choice_type": "spell_selection",
+          "status": "generic_ready",
+          "handler": "rules.level_up.spell_level_up_choices",
+          "blocks_level_path": false,
+          "notes": "Existing spell level-up choices should cover cantrip, prepared, known, and Wizard spellbook increases; verify high-level PDF display when enabling.",
+          "changes": {
+            "known_spells": {
+              "before": 34,
+              "after": 36
+            },
+            "prepared_spells": {
+              "before": 19,
+              "after": 21
+            }
+          }
+        }
+      ],
+      "resource_changes": {},
+      "spellcasting_changes": {
+        "known_spells": {
+          "before": 34,
+          "after": 36
+        },
+        "prepared_spells": {
+          "before": 19,
+          "after": 21
+        }
+      },
+      "subclass_features": [],
+      "blocks_level_path": false
+    }
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "barbarian_6_wild_heart_aspect_of_the_wilds": {
+    "class": "Barbarian",
+    "level": 6,
+    "subclass": "Path of the Wild Heart",
+    "feature": "Aspect of the Wilds",
+    "choice_type": "feature_option",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Prepared as a generic single class option: Owl, Panther, or Salmon."
+  },
+  "barbarian_8_asi_or_feat": {
+    "class": "Barbarian",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "bard_6_lore_magical_discoveries": {
+    "class": "Bard",
+    "level": 6,
+    "subclass": "College of Lore",
+    "feature": "Magical Discoveries",
+    "choice_type": "spell_choice",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses generic class-option spell selection from Cleric, Druid, and Wizard spells; selected spells are added as granted spells."
+  },
+  "bard_8_asi_or_feat": {
+    "class": "Bard",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "cleric_7_blessed_strikes": {
+    "class": "Cleric",
+    "level": 7,
+    "feature": "Blessed Strikes",
+    "choice_type": "feature_option",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Prepared as a generic single class option: Divine Strike or Potent Spellcasting."
+  },
+  "cleric_8_asi_or_feat": {
+    "class": "Cleric",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "druid_7_elemental_fury": {
+    "class": "Druid",
+    "level": 7,
+    "feature": "Elemental Fury",
+    "choice_type": "feature_option",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Prepared as a generic single class option: Potent Spellcasting or Primal Strike."
+  },
+  "druid_8_asi_or_feat": {
+    "class": "Druid",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "fighter_6_asi_or_feat": {
+    "class": "Fighter",
+    "level": 6,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "fighter_7_champion_additional_fighting_style": {
+    "class": "Fighter",
+    "level": 7,
+    "subclass": "Champion",
+    "feature": "Additional Fighting Style",
+    "choice_type": "fighting_style_choice",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Prepared as a generic class option selection excluding known fighting styles."
+  },
+  "fighter_8_asi_or_feat": {
+    "class": "Fighter",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "monk_8_asi_or_feat": {
+    "class": "Monk",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "paladin_8_asi_or_feat": {
+    "class": "Paladin",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "ranger_7_gloom_stalker_iron_mind": {
+    "class": "Ranger",
+    "level": 7,
+    "subclass": "Gloom Stalker",
+    "feature": "Iron Mind",
+    "choice_type": "saving_throw_proficiency_choice",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Prepared as a generic single class option that grants Wisdom, or Intelligence/Charisma if Wisdom is already known."
+  },
+  "ranger_7_hunter_defensive_tactics": {
+    "class": "Ranger",
+    "level": 7,
+    "subclass": "Hunter",
+    "feature": "Defensive Tactics",
+    "choice_type": "feature_option",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Prepared as a generic single class option: Escape the Horde or Multiattack Defense."
+  },
+  "ranger_8_asi_or_feat": {
+    "class": "Ranger",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "rogue_6_expertise": {
+    "class": "Rogue",
+    "level": 6,
+    "feature": "Expertise",
+    "choice_type": "expertise_choice",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Prepared as a generic expertise selection from proficient skills."
+  },
+  "rogue_8_asi_or_feat": {
+    "class": "Rogue",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "sorcerer_6_draconic_elemental_affinity": {
+    "class": "Sorcerer",
+    "level": 6,
+    "subclass": "Draconic Sorcery",
+    "feature": "Elemental Affinity",
+    "choice_type": "feature_option",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Prepared as a generic single class option with Acid, Cold, Fire, Lightning, or Poison."
+  },
+  "sorcerer_8_asi_or_feat": {
+    "class": "Sorcerer",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "warlock_5_invocations": {
+    "class": "Warlock",
+    "level": 5,
+    "feature": "Eldritch Invocations",
+    "choice_type": "invocation_choice",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses progression-based invocation count."
+  },
+  "warlock_7_invocations": {
+    "class": "Warlock",
+    "level": 7,
+    "feature": "Eldritch Invocations",
+    "choice_type": "invocation_choice",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses progression-based invocation count."
+  },
+  "warlock_8_asi_or_feat": {
+    "class": "Warlock",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "wizard_8_asi_or_feat": {
+    "class": "Wizard",
+    "level": 8,
+    "feature": "Ability Score Improvement",
+    "choice_type": "asi_or_feat",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Uses existing ASI/general feat handler."
+  },
+  "later_subclass_feature_gains": {
+    "class": "All classes with subclass features",
+    "level": "6-7",
+    "feature": "Subclass Feature",
+    "choice_type": "subclass_feature_gain",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Later imported subclass_choice placeholders are normalized to subclass_feature_gain instead of asking for subclass again."
+  },
+  "generic_spell_progression": {
+    "class": "Spellcasting classes",
+    "level": "5-8",
+    "feature": "Spellcasting progression",
+    "choice_type": "spell_choice",
+    "implemented": true,
+    "tested": true,
+    "blocks_level_path": false,
+    "notes": "Existing level-up spell selection handles cantrip, prepared, known, and Wizard spellbook count increases from progression data."
+  }
+}

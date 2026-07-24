@@ -1,0 +1,9 @@
+{
+  "source_repo": "5etools-mirror-3/5etools-src",
+  "source_base_url": "https://raw.githubusercontent.com/5etools-mirror-3/5etools-src/main/data",
+  "sources": [
+    "XPHB"
+  ],
+  "raw_dir": "data\\raw\\5etools",
+  "imported_dir": "data\\imported\\5etools"
+}

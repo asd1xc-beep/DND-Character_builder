@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Human",
+    "size": "Medium or Small",
+    "speed": 30,
+    "languages": ["Common", "One extra language"],
+    "traits": ["Resourceful", "Skillful", "Versatile"]
+  },
+  {
+    "name": "Elf",
+    "size": "Medium",
+    "speed": 30,
+    "languages": ["Common", "Elvish"],
+    "traits": ["Darkvision", "Fey Ancestry", "Trance", "Keen Senses"]
+  },
+  {
+    "name": "Dwarf",
+    "size": "Medium",
+    "speed": 30,
+    "languages": ["Common", "Dwarvish"],
+    "traits": ["Darkvision", "Dwarven Resilience", "Stonecunning", "Toughness"]
+  },
+  {
+    "name": "Halfling",
+    "size": "Small",
+    "speed": 30,
+    "languages": ["Common", "Halfling"],
+    "traits": ["Brave", "Halfling Nimbleness", "Luck"]
+  }
+]

@@ -1,0 +1,977 @@
+[
+  {
+    "name": "Acolyte",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Intelligence",
+        "Wisdom",
+        "Charisma"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Magic Initiate (Cleric)"
+    ],
+    "skill_proficiencies": [
+      "Insight",
+      "Religion"
+    ],
+    "tool_proficiencies": [
+      "Calligrapher's Supplies"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Magic Initiate (Cleric)",
+    "feature_descriptions": {},
+    "equipment": [
+      "8 GP",
+      "Book",
+      "Calligrapher's Supplies",
+      "Holy Symbol",
+      "Parchment",
+      "Robe"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Book",
+          "Calligrapher's Supplies",
+          "Holy Symbol",
+          "Parchment x10",
+          "Robe",
+          "8 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Acolyte|XPHB"
+  },
+  {
+    "name": "Artisan",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Strength",
+        "Dexterity",
+        "Intelligence"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Crafter"
+    ],
+    "skill_proficiencies": [
+      "Investigation",
+      "Persuasion"
+    ],
+    "tool_proficiencies": [],
+    "tool_choices": {
+      "choose": 1,
+      "from": [
+        "Any artisans tool"
+      ]
+    },
+    "languages": [],
+    "feature": "Origin Feat: Crafter",
+    "feature_descriptions": {
+      "Crafter": "You gain the following benefits.\n\nTool Proficiency: You gain proficiency with three different Artisan's Tools of your choice from the Fast Crafting table.\n\nDiscount: Whenever you buy a nonmagical item, you receive a 20 percent discount on it.\n\nFast Crafting: When you finish a Long Rest, you can craft one piece of gear from the Fast Crafting table, provided you have the Artisan's Tools associated with that item and have proficiency with those tools. The item lasts until you finish another Long Rest, at which point the item falls apart.",
+      "Origin Feat: Crafter": "You gain the following benefits.\n\nTool Proficiency: You gain proficiency with three different Artisan's Tools of your choice from the Fast Crafting table.\n\nDiscount: Whenever you buy a nonmagical item, you receive a 20 percent discount on it.\n\nFast Crafting: When you finish a Long Rest, you can craft one piece of gear from the Fast Crafting table, provided you have the Artisan's Tools associated with that item and have proficiency with those tools. The item lasts until you finish another Long Rest, at which point the item falls apart."
+    },
+    "equipment": [
+      "32 GP",
+      "Pouch",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Pouch x2",
+          "Traveler's Clothes",
+          "32 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Artisan|XPHB"
+  },
+  {
+    "name": "Charlatan",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Dexterity",
+        "Constitution",
+        "Charisma"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Skilled"
+    ],
+    "skill_proficiencies": [
+      "Deception",
+      "Sleight of Hand"
+    ],
+    "tool_proficiencies": [
+      "Forgery Kit"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Skilled",
+    "feature_descriptions": {
+      "Skilled": "You gain proficiency in any combination of three skills or tools of your choice.\n\nRepeatable: You can take this feat more than once.",
+      "Origin Feat: Skilled": "You gain proficiency in any combination of three skills or tools of your choice.\n\nRepeatable: You can take this feat more than once."
+    },
+    "equipment": [
+      "15 GP",
+      "Costume",
+      "Fine Clothes",
+      "Forgery Kit"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Forgery Kit",
+          "Costume",
+          "Fine Clothes",
+          "15 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Charlatan|XPHB"
+  },
+  {
+    "name": "Criminal",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Dexterity",
+        "Constitution",
+        "Intelligence"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Alert"
+    ],
+    "skill_proficiencies": [
+      "Sleight of Hand",
+      "Stealth"
+    ],
+    "tool_proficiencies": [
+      "Thieves' Tools"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Alert",
+    "feature_descriptions": {
+      "Alert": "You gain the following benefits.\n\nInitiative Proficiency: When you roll Initiative, you can add your Proficiency Bonus to the roll.\n\nInitiative Swap: Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition.",
+      "Origin Feat: Alert": "You gain the following benefits.\n\nInitiative Proficiency: When you roll Initiative, you can add your Proficiency Bonus to the roll.\n\nInitiative Swap: Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition."
+    },
+    "equipment": [
+      "16 GP",
+      "Crowbar",
+      "Dagger",
+      "Pouch",
+      "Thieves' Tools",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Dagger x2",
+          "Thieves' Tools",
+          "Crowbar",
+          "Pouch x2",
+          "Traveler's Clothes",
+          "16 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Criminal|XPHB"
+  },
+  {
+    "name": "Entertainer",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Strength",
+        "Dexterity",
+        "Charisma"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Musician"
+    ],
+    "skill_proficiencies": [
+      "Acrobatics",
+      "Performance"
+    ],
+    "tool_proficiencies": [],
+    "tool_choices": {
+      "choose": 1,
+      "from": [
+        "Any musical instrument"
+      ]
+    },
+    "languages": [],
+    "feature": "Origin Feat: Musician",
+    "feature_descriptions": {
+      "Musician": "You gain the following benefits.\n\nInstrument Training: You gain proficiency with three Musical Instruments of your choice.\n\nEncouraging Song: As you finish a Short or Long Rest, you can play a song on a Musical Instrument with which you have proficiency and give Heroic Inspiration to allies who hear the song. The number of allies you can affect in this way equals your Proficiency Bonus.",
+      "Origin Feat: Musician": "You gain the following benefits.\n\nInstrument Training: You gain proficiency with three Musical Instruments of your choice.\n\nEncouraging Song: As you finish a Short or Long Rest, you can play a song on a Musical Instrument with which you have proficiency and give Heroic Inspiration to allies who hear the song. The number of allies you can affect in this way equals your Proficiency Bonus."
+    },
+    "equipment": [
+      "11 GP",
+      "Costume",
+      "Mirror",
+      "Perfume",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Costume x2",
+          "Mirror",
+          "Perfume",
+          "Traveler's Clothes",
+          "11 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Entertainer|XPHB"
+  },
+  {
+    "name": "Farmer",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Strength",
+        "Constitution",
+        "Wisdom"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Tough"
+    ],
+    "skill_proficiencies": [
+      "Animal Handling",
+      "Nature"
+    ],
+    "tool_proficiencies": [
+      "Carpenter's Tools"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Tough",
+    "feature_descriptions": {
+      "Tough": "Your Hit Point maximum increases by an amount equal to twice your character level when you gain this feat. Whenever you gain a character level thereafter, your Hit Point maximum increases by an additional 2 Hit Points.",
+      "Origin Feat: Tough": "Your Hit Point maximum increases by an amount equal to twice your character level when you gain this feat. Whenever you gain a character level thereafter, your Hit Point maximum increases by an additional 2 Hit Points."
+    },
+    "equipment": [
+      "30 GP",
+      "Carpenter's Tools",
+      "Healer's Kit",
+      "Iron Pot",
+      "Shovel",
+      "Sickle",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Sickle",
+          "Carpenter's Tools",
+          "Healer's Kit",
+          "Iron Pot",
+          "Shovel",
+          "Traveler's Clothes",
+          "30 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Farmer|XPHB"
+  },
+  {
+    "name": "Guard",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Strength",
+        "Intelligence",
+        "Wisdom"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Alert"
+    ],
+    "skill_proficiencies": [
+      "Athletics",
+      "Perception"
+    ],
+    "tool_proficiencies": [],
+    "tool_choices": {
+      "choose": 1,
+      "from": [
+        "Any gaming set"
+      ]
+    },
+    "languages": [],
+    "feature": "Origin Feat: Alert",
+    "feature_descriptions": {
+      "Alert": "You gain the following benefits.\n\nInitiative Proficiency: When you roll Initiative, you can add your Proficiency Bonus to the roll.\n\nInitiative Swap: Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition.",
+      "Origin Feat: Alert": "You gain the following benefits.\n\nInitiative Proficiency: When you roll Initiative, you can add your Proficiency Bonus to the roll.\n\nInitiative Swap: Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition."
+    },
+    "equipment": [
+      "12 GP",
+      "Bolts (20)",
+      "Hooded Lantern",
+      "Light Crossbow",
+      "Manacles",
+      "Quiver",
+      "Spear",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Spear",
+          "Light Crossbow",
+          "Bolts (20)",
+          "Hooded Lantern",
+          "Manacles",
+          "Quiver",
+          "Traveler's Clothes",
+          "12 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Guard|XPHB"
+  },
+  {
+    "name": "Guide",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Dexterity",
+        "Constitution",
+        "Wisdom"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Magic Initiate (Druid)"
+    ],
+    "skill_proficiencies": [
+      "Stealth",
+      "Survival"
+    ],
+    "tool_proficiencies": [
+      "Cartographer's Tools"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Magic Initiate (Druid)",
+    "feature_descriptions": {},
+    "equipment": [
+      "3 GP",
+      "Arrows (20)",
+      "Bedroll",
+      "Cartographer's Tools",
+      "Quiver",
+      "Shortbow",
+      "Tent",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Shortbow",
+          "Arrows (20)",
+          "Cartographer's Tools",
+          "Bedroll",
+          "Quiver",
+          "Tent",
+          "Traveler's Clothes",
+          "3 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Guide|XPHB"
+  },
+  {
+    "name": "Hermit",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Constitution",
+        "Wisdom",
+        "Charisma"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Healer"
+    ],
+    "skill_proficiencies": [
+      "Medicine",
+      "Religion"
+    ],
+    "tool_proficiencies": [
+      "Herbalism Kit"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Healer",
+    "feature_descriptions": {
+      "Healer": "You gain the following benefits.\n\nBattle Medic: If you have a Healer's Kit, you can expend one use of it and tend to a creature within 5 feet of yourself as a Utilize action. That creature can expend one of its Hit Point Dice, and you then roll that die. The creature regains a number of Hit Points equal to the roll plus your Proficiency Bonus.\n\nHealing Rerolls: Whenever you roll a die to determine the number of Hit Points you restore with a spell or with this feat's Battle Medic benefit, you can reroll the die if it rolls a 1, and you must use the new roll.",
+      "Origin Feat: Healer": "You gain the following benefits.\n\nBattle Medic: If you have a Healer's Kit, you can expend one use of it and tend to a creature within 5 feet of yourself as a Utilize action. That creature can expend one of its Hit Point Dice, and you then roll that die. The creature regains a number of Hit Points equal to the roll plus your Proficiency Bonus.\n\nHealing Rerolls: Whenever you roll a die to determine the number of Hit Points you restore with a spell or with this feat's Battle Medic benefit, you can reroll the die if it rolls a 1, and you must use the new roll."
+    },
+    "equipment": [
+      "16 GP",
+      "Bedroll",
+      "Book",
+      "Herbalism Kit",
+      "Lamp",
+      "Oil",
+      "Quarterstaff",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Quarterstaff",
+          "Herbalism Kit",
+          "Bedroll",
+          "Book",
+          "Lamp",
+          "Oil x3",
+          "Traveler's Clothes",
+          "16 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Hermit|XPHB"
+  },
+  {
+    "name": "Merchant",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Constitution",
+        "Intelligence",
+        "Charisma"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Lucky"
+    ],
+    "skill_proficiencies": [
+      "Animal Handling",
+      "Persuasion"
+    ],
+    "tool_proficiencies": [
+      "Navigator's Tools"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Lucky",
+    "feature_descriptions": {
+      "Lucky": "You gain the following benefits.\n\nLuck Points: You have a number of Luck Points equal to your Proficiency Bonus and can spend the points on the benefits below. You regain your expended Luck Points when you finish a Long Rest.\n\nAdvantage: When you roll a d20 for a D20 Test, you can spend 1 Luck Point to give yourself Advantage on the roll.\n\nDisadvantage: When a creature rolls a d20 for an attack roll against you, you can spend 1 Luck Point to impose Disadvantage on that roll.",
+      "Origin Feat: Lucky": "You gain the following benefits.\n\nLuck Points: You have a number of Luck Points equal to your Proficiency Bonus and can spend the points on the benefits below. You regain your expended Luck Points when you finish a Long Rest.\n\nAdvantage: When you roll a d20 for a D20 Test, you can spend 1 Luck Point to give yourself Advantage on the roll.\n\nDisadvantage: When a creature rolls a d20 for an attack roll against you, you can spend 1 Luck Point to impose Disadvantage on that roll."
+    },
+    "equipment": [
+      "22 GP",
+      "Navigator's Tools",
+      "Pouch",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Navigator's Tools",
+          "Pouch x2",
+          "Traveler's Clothes",
+          "22 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Merchant|XPHB"
+  },
+  {
+    "name": "Noble",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Strength",
+        "Intelligence",
+        "Charisma"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Skilled"
+    ],
+    "skill_proficiencies": [
+      "History",
+      "Persuasion"
+    ],
+    "tool_proficiencies": [],
+    "tool_choices": {
+      "choose": 1,
+      "from": [
+        "Any gaming set"
+      ]
+    },
+    "languages": [],
+    "feature": "Origin Feat: Skilled",
+    "feature_descriptions": {
+      "Skilled": "You gain proficiency in any combination of three skills or tools of your choice.\n\nRepeatable: You can take this feat more than once.",
+      "Origin Feat: Skilled": "You gain proficiency in any combination of three skills or tools of your choice.\n\nRepeatable: You can take this feat more than once."
+    },
+    "equipment": [
+      "29 GP",
+      "Fine Clothes",
+      "Perfume"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Fine Clothes",
+          "Perfume",
+          "29 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Noble|XPHB"
+  },
+  {
+    "name": "Sage",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Constitution",
+        "Intelligence",
+        "Wisdom"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Magic Initiate (Wizard)"
+    ],
+    "skill_proficiencies": [
+      "Arcana",
+      "History"
+    ],
+    "tool_proficiencies": [
+      "Calligrapher's Supplies"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Magic Initiate (Wizard)",
+    "feature_descriptions": {},
+    "equipment": [
+      "8 GP",
+      "Book",
+      "Calligrapher's Supplies",
+      "Parchment",
+      "Quarterstaff",
+      "Robe"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Quarterstaff",
+          "Calligrapher's Supplies",
+          "Book",
+          "Parchment x8",
+          "Robe",
+          "8 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Sage|XPHB"
+  },
+  {
+    "name": "Sailor",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Strength",
+        "Dexterity",
+        "Wisdom"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Tavern Brawler"
+    ],
+    "skill_proficiencies": [
+      "Acrobatics",
+      "Perception"
+    ],
+    "tool_proficiencies": [
+      "Navigator's Tools"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Tavern Brawler",
+    "feature_descriptions": {
+      "Tavern Brawler": "You gain the following benefits.\n\nEnhanced Unarmed Strike: When you hit with your Unarmed Strike and deal damage, you can deal Bludgeoning damage equal to 1d4 plus your Strength modifier instead of the normal damage of an Unarmed Strike.\n\nDamage Rerolls: Whenever you roll a damage die for your Unarmed Strike, you can reroll the die if it rolls a 1, and you must use the new roll.\n\nImprovised Weaponry: You have proficiency with improvised weapons.\n\nPush: When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can deal damage to the target and also push it 5 feet away from you. You can use this benefit only once per turn.",
+      "Origin Feat: Tavern Brawler": "You gain the following benefits.\n\nEnhanced Unarmed Strike: When you hit with your Unarmed Strike and deal damage, you can deal Bludgeoning damage equal to 1d4 plus your Strength modifier instead of the normal damage of an Unarmed Strike.\n\nDamage Rerolls: Whenever you roll a damage die for your Unarmed Strike, you can reroll the die if it rolls a 1, and you must use the new roll.\n\nImprovised Weaponry: You have proficiency with improvised weapons.\n\nPush: When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can deal damage to the target and also push it 5 feet away from you. You can use this benefit only once per turn."
+    },
+    "equipment": [
+      "20 GP",
+      "Dagger",
+      "Navigator's Tools",
+      "Rope",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Dagger",
+          "Navigator's Tools",
+          "Rope",
+          "Traveler's Clothes",
+          "20 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Sailor|XPHB"
+  },
+  {
+    "name": "Scribe",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Dexterity",
+        "Intelligence",
+        "Wisdom"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Skilled"
+    ],
+    "skill_proficiencies": [
+      "Investigation",
+      "Perception"
+    ],
+    "tool_proficiencies": [
+      "Calligrapher's Supplies"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Skilled",
+    "feature_descriptions": {
+      "Skilled": "You gain proficiency in any combination of three skills or tools of your choice.\n\nRepeatable: You can take this feat more than once.",
+      "Origin Feat: Skilled": "You gain proficiency in any combination of three skills or tools of your choice.\n\nRepeatable: You can take this feat more than once."
+    },
+    "equipment": [
+      "23 GP",
+      "Calligrapher's Supplies",
+      "Fine Clothes",
+      "Lamp",
+      "Oil",
+      "Parchment"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Calligrapher's Supplies",
+          "Fine Clothes",
+          "Lamp",
+          "Oil",
+          "Parchment",
+          "23 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Scribe|XPHB"
+  },
+  {
+    "name": "Soldier",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Strength",
+        "Dexterity",
+        "Constitution"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Savage Attacker"
+    ],
+    "skill_proficiencies": [
+      "Athletics",
+      "Intimidation"
+    ],
+    "tool_proficiencies": [],
+    "tool_choices": {
+      "choose": 1,
+      "from": [
+        "Any gaming set"
+      ]
+    },
+    "languages": [],
+    "feature": "Origin Feat: Savage Attacker",
+    "feature_descriptions": {
+      "Savage Attacker": "You've trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either roll against the target.",
+      "Origin Feat: Savage Attacker": "You've trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either roll against the target."
+    },
+    "equipment": [
+      "14 GP",
+      "Arrows (20)",
+      "Healer's Kit",
+      "Quiver",
+      "Shortbow",
+      "Spear",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Spear",
+          "Shortbow",
+          "Arrows (20)",
+          "Healer's Kit",
+          "Quiver",
+          "Traveler's Clothes",
+          "14 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Soldier|XPHB"
+  },
+  {
+    "name": "Wayfarer",
+    "source": "XPHB",
+    "ability_options": {
+      "mode": "choose_weighted",
+      "abilities": [
+        "Dexterity",
+        "Wisdom",
+        "Charisma"
+      ],
+      "primary_bonus": 2,
+      "secondary_bonus": 1
+    },
+    "origin_feats": [
+      "Lucky"
+    ],
+    "skill_proficiencies": [
+      "Insight",
+      "Stealth"
+    ],
+    "tool_proficiencies": [
+      "Thieves' Tools"
+    ],
+    "tool_choices": {
+      "choose": 0,
+      "from": []
+    },
+    "languages": [],
+    "feature": "Origin Feat: Lucky",
+    "feature_descriptions": {
+      "Lucky": "You gain the following benefits.\n\nLuck Points: You have a number of Luck Points equal to your Proficiency Bonus and can spend the points on the benefits below. You regain your expended Luck Points when you finish a Long Rest.\n\nAdvantage: When you roll a d20 for a D20 Test, you can spend 1 Luck Point to give yourself Advantage on the roll.\n\nDisadvantage: When a creature rolls a d20 for an attack roll against you, you can spend 1 Luck Point to impose Disadvantage on that roll.",
+      "Origin Feat: Lucky": "You gain the following benefits.\n\nLuck Points: You have a number of Luck Points equal to your Proficiency Bonus and can spend the points on the benefits below. You regain your expended Luck Points when you finish a Long Rest.\n\nAdvantage: When you roll a d20 for a D20 Test, you can spend 1 Luck Point to give yourself Advantage on the roll.\n\nDisadvantage: When a creature rolls a d20 for an attack roll against you, you can spend 1 Luck Point to impose Disadvantage on that roll."
+    },
+    "equipment": [
+      "16 GP",
+      "Bedroll",
+      "Dagger",
+      "Pouch",
+      "Thieves' Tools",
+      "Traveler's Clothes"
+    ],
+    "equipment_packages": [
+      {
+        "name": "A",
+        "items": [
+          "Dagger x2",
+          "Thieves' Tools",
+          "Bedroll",
+          "Pouch x2",
+          "Traveler's Clothes",
+          "16 GP"
+        ]
+      },
+      {
+        "name": "B",
+        "items": [
+          "50 GP"
+        ]
+      }
+    ],
+    "raw_ref": "Wayfarer|XPHB"
+  }
+]

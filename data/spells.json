@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Fire Bolt",
+    "level": 0,
+    "school": "Evocation",
+    "classes": ["Wizard"],
+    "casting_time": "Action",
+    "range": "120 feet",
+    "components": ["V", "S"],
+    "duration": "Instantaneous"
+  },
+  {
+    "name": "Mage Hand",
+    "level": 0,
+    "school": "Conjuration",
+    "classes": ["Wizard"],
+    "casting_time": "Action",
+    "range": "30 feet",
+    "components": ["V", "S"],
+    "duration": "1 minute"
+  },
+  {
+    "name": "Prestidigitation",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": ["Wizard"],
+    "casting_time": "Action",
+    "range": "10 feet",
+    "components": ["V", "S"],
+    "duration": "Up to 1 hour"
+  },
+  {
+    "name": "Light",
+    "level": 0,
+    "school": "Evocation",
+    "classes": ["Cleric", "Wizard"],
+    "casting_time": "Action",
+    "range": "Touch",
+    "components": ["V", "M"],
+    "duration": "1 hour"
+  },
+  {
+    "name": "Sacred Flame",
+    "level": 0,
+    "school": "Evocation",
+    "classes": ["Cleric"],
+    "casting_time": "Action",
+    "range": "60 feet",
+    "components": ["V", "S"],
+    "duration": "Instantaneous"
+  },
+  {
+    "name": "Thaumaturgy",
+    "level": 0,
+    "school": "Transmutation",
+    "classes": ["Cleric"],
+    "casting_time": "Action",
+    "range": "30 feet",
+    "components": ["V"],
+    "duration": "Up to 1 minute"
+  },
+  {
+    "name": "Cure Wounds",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": ["Cleric"],
+    "casting_time": "Action",
+    "range": "Touch",
+    "components": ["V", "S"],
+    "duration": "Instantaneous"
+  },
+  {
+    "name": "Guiding Bolt",
+    "level": 1,
+    "school": "Evocation",
+    "classes": ["Cleric"],
+    "casting_time": "Action",
+    "range": "120 feet",
+    "components": ["V", "S"],
+    "duration": "1 round"
+  },
+  {
+    "name": "Healing Word",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": ["Cleric"],
+    "casting_time": "Bonus Action",
+    "range": "60 feet",
+    "components": ["V"],
+    "duration": "Instantaneous"
+  },
+  {
+    "name": "Shield of Faith",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": ["Cleric"],
+    "casting_time": "Bonus Action",
+    "range": "60 feet",
+    "components": ["V", "S", "M"],
+    "duration": "Concentration, up to 10 minutes"
+  },
+  {
+    "name": "Burning Hands",
+    "level": 1,
+    "school": "Evocation",
+    "classes": ["Wizard"],
+    "casting_time": "Action",
+    "range": "Self",
+    "components": ["V", "S"],
+    "duration": "Instantaneous"
+  },
+  {
+    "name": "Detect Magic",
+    "level": 1,
+    "school": "Divination",
+    "classes": ["Cleric", "Wizard"],
+    "casting_time": "Action",
+    "range": "Self",
+    "components": ["V", "S"],
+    "duration": "Concentration, up to 10 minutes"
+  },
+  {
+    "name": "Magic Missile",
+    "level": 1,
+    "school": "Evocation",
+    "classes": ["Wizard"],
+    "casting_time": "Action",
+    "range": "120 feet",
+    "components": ["V", "S"],
+    "duration": "Instantaneous"
+  },
+  {
+    "name": "Shield",
+    "level": 1,
+    "school": "Abjuration",
+    "classes": ["Wizard"],
+    "casting_time": "Reaction",
+    "range": "Self",
+    "components": ["V", "S"],
+    "duration": "1 round"
+  },
+  {
+    "name": "Sleep",
+    "level": 1,
+    "school": "Enchantment",
+    "classes": ["Wizard"],
+    "casting_time": "Action",
+    "range": "60 feet",
+    "components": ["V", "S", "M"],
+    "duration": "1 minute"
+  }
+]

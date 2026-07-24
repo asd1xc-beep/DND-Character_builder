@@ -1,0 +1,289 @@
+[
+  {
+    "name": "Battleaxe",
+    "category": "Martial",
+    "damage": "1d8",
+    "damage_type": "S",
+    "mastery": "Topple"
+  },
+  {
+    "name": "Blowgun",
+    "category": "Martial",
+    "damage": "1",
+    "damage_type": "P",
+    "mastery": "Vex"
+  },
+  {
+    "name": "Club",
+    "category": "Simple",
+    "damage": "1d4",
+    "damage_type": "B",
+    "mastery": "Slow"
+  },
+  {
+    "name": "Dagger",
+    "category": "Simple",
+    "damage": "1d4",
+    "damage_type": "P",
+    "mastery": "Nick"
+  },
+  {
+    "name": "Dart",
+    "category": "Simple",
+    "damage": "1d4",
+    "damage_type": "P",
+    "mastery": "Vex"
+  },
+  {
+    "name": "Flail",
+    "category": "Martial",
+    "damage": "1d8",
+    "damage_type": "B",
+    "mastery": "Sap"
+  },
+  {
+    "name": "Glaive",
+    "category": "Martial",
+    "damage": "1d10",
+    "damage_type": "S",
+    "mastery": "Graze"
+  },
+  {
+    "name": "Greataxe",
+    "category": "Martial",
+    "damage": "1d12",
+    "damage_type": "S",
+    "mastery": "Cleave"
+  },
+  {
+    "name": "Greatclub",
+    "category": "Simple",
+    "damage": "1d8",
+    "damage_type": "B",
+    "mastery": "Push"
+  },
+  {
+    "name": "Greatsword",
+    "category": "Martial",
+    "damage": "2d6",
+    "damage_type": "S",
+    "mastery": "Graze"
+  },
+  {
+    "name": "Halberd",
+    "category": "Martial",
+    "damage": "1d10",
+    "damage_type": "S",
+    "mastery": "Cleave"
+  },
+  {
+    "name": "Hand Crossbow",
+    "category": "Martial",
+    "damage": "1d6",
+    "damage_type": "P",
+    "mastery": "Vex"
+  },
+  {
+    "name": "Handaxe",
+    "category": "Simple",
+    "damage": "1d6",
+    "damage_type": "S",
+    "mastery": "Vex"
+  },
+  {
+    "name": "Heavy Crossbow",
+    "category": "Martial",
+    "damage": "1d10",
+    "damage_type": "P",
+    "mastery": "Push"
+  },
+  {
+    "name": "Javelin",
+    "category": "Simple",
+    "damage": "1d6",
+    "damage_type": "P",
+    "mastery": "Slow"
+  },
+  {
+    "name": "Lance",
+    "category": "Martial",
+    "damage": "1d10",
+    "damage_type": "P",
+    "mastery": "Topple"
+  },
+  {
+    "name": "Light Crossbow",
+    "category": "Simple",
+    "damage": "1d8",
+    "damage_type": "P",
+    "mastery": "Slow"
+  },
+  {
+    "name": "Light Hammer",
+    "category": "Simple",
+    "damage": "1d4",
+    "damage_type": "B",
+    "mastery": "Nick"
+  },
+  {
+    "name": "Longbow",
+    "category": "Martial",
+    "damage": "1d8",
+    "damage_type": "P",
+    "mastery": "Slow"
+  },
+  {
+    "name": "Longsword",
+    "category": "Martial",
+    "damage": "1d8",
+    "damage_type": "S",
+    "mastery": "Sap"
+  },
+  {
+    "name": "Mace",
+    "category": "Simple",
+    "damage": "1d6",
+    "damage_type": "B",
+    "mastery": "Sap"
+  },
+  {
+    "name": "Maul",
+    "category": "Martial",
+    "damage": "2d6",
+    "damage_type": "B",
+    "mastery": "Topple"
+  },
+  {
+    "name": "Morningstar",
+    "category": "Martial",
+    "damage": "1d8",
+    "damage_type": "P",
+    "mastery": "Sap"
+  },
+  {
+    "name": "Musket",
+    "category": "Martial",
+    "damage": "1d12",
+    "damage_type": "P",
+    "mastery": "Slow"
+  },
+  {
+    "name": "Pike",
+    "category": "Martial",
+    "damage": "1d10",
+    "damage_type": "P",
+    "mastery": "Push"
+  },
+  {
+    "name": "Pistol",
+    "category": "Martial",
+    "damage": "1d10",
+    "damage_type": "P",
+    "mastery": "Vex"
+  },
+  {
+    "name": "Psychic Blade",
+    "category": "Simple",
+    "damage": "1d6",
+    "damage_type": "Y",
+    "mastery": "{'uid': 'Vex"
+  },
+  {
+    "name": "Quarterstaff",
+    "category": "Simple",
+    "damage": "1d6",
+    "damage_type": "B",
+    "mastery": "Topple"
+  },
+  {
+    "name": "Rapier",
+    "category": "Martial",
+    "damage": "1d8",
+    "damage_type": "P",
+    "mastery": "Vex"
+  },
+  {
+    "name": "Scimitar",
+    "category": "Martial",
+    "damage": "1d6",
+    "damage_type": "S",
+    "mastery": "Nick"
+  },
+  {
+    "name": "Shortbow",
+    "category": "Simple",
+    "damage": "1d6",
+    "damage_type": "P",
+    "mastery": "Vex"
+  },
+  {
+    "name": "Shortsword",
+    "category": "Martial",
+    "damage": "1d6",
+    "damage_type": "P",
+    "mastery": "Vex"
+  },
+  {
+    "name": "Sickle",
+    "category": "Simple",
+    "damage": "1d4",
+    "damage_type": "S",
+    "mastery": "Nick"
+  },
+  {
+    "name": "Sling",
+    "category": "Simple",
+    "damage": "1d4",
+    "damage_type": "B",
+    "mastery": "Slow"
+  },
+  {
+    "name": "Spear",
+    "category": "Simple",
+    "damage": "1d6",
+    "damage_type": "P",
+    "mastery": "Sap"
+  },
+  {
+    "name": "Staff",
+    "category": "Simple",
+    "damage": "1d6",
+    "damage_type": "B",
+    "mastery": "Topple"
+  },
+  {
+    "name": "Trident",
+    "category": "Martial",
+    "damage": "1d8",
+    "damage_type": "P",
+    "mastery": "Topple"
+  },
+  {
+    "name": "War Pick",
+    "category": "Martial",
+    "damage": "1d8",
+    "damage_type": "P",
+    "mastery": "Sap"
+  },
+  {
+    "name": "Warhammer",
+    "category": "Martial",
+    "damage": "1d8",
+    "damage_type": "B",
+    "mastery": "Push"
+  },
+  {
+    "name": "Whip",
+    "category": "Martial",
+    "damage": "1d4",
+    "damage_type": "S",
+    "mastery": "Slow"
+  },
+  {
+    "name": "Wooden Staff",
+    "category": "Simple",
+    "damage": "1d6",
+    "damage_type": "B",
+    "mastery": "Topple"
+  }
+]

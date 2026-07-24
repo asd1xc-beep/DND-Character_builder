@@ -1,0 +1,207 @@
+[
+  {
+    "name": "Fighter",
+    "hit_die": 10,
+    "primary_ability": ["Strength", "Dexterity"],
+    "saving_throw_proficiencies": ["Strength", "Constitution"],
+    "skill_choices": {
+      "choose": 2,
+      "from": [
+        "Acrobatics",
+        "Animal Handling",
+        "Athletics",
+        "History",
+        "Insight",
+        "Intimidation",
+        "Perception",
+        "Survival"
+      ]
+    },
+    "armor_proficiencies": ["Light Armor", "Medium Armor", "Heavy Armor", "Shields"],
+    "weapon_proficiencies": ["Simple Weapons", "Martial Weapons"],
+    "tool_proficiencies": [],
+    "level_1_features": ["Fighting Style", "Second Wind", "Weapon Mastery"],
+    "level_features": {
+      "1": ["Fighting Style", "Second Wind", "Weapon Mastery"],
+      "2": ["Action Surge", "Tactical Mind"],
+      "3": ["Fighter Subclass"]
+    },
+    "progression": {
+      "1": [
+        {"id": "fighter_1_fighting_style", "type": "automatic_feature", "name": "Fighting Style", "source": "Fighter", "level": 1},
+        {"id": "fighter_1_second_wind", "type": "automatic_feature", "name": "Second Wind", "source": "Fighter", "level": 1},
+        {"id": "fighter_1_weapon_mastery", "type": "automatic_feature", "name": "Weapon Mastery", "source": "Fighter", "level": 1}
+      ],
+      "2": [
+        {"id": "fighter_2_action_surge", "type": "automatic_feature", "name": "Action Surge", "source": "Fighter", "level": 2},
+        {"id": "fighter_2_tactical_mind", "type": "automatic_feature", "name": "Tactical Mind", "source": "Fighter", "level": 2}
+      ],
+      "3": [
+        {"id": "fighter_3_fighter_subclass", "type": "subclass_choice", "name": "Fighter Subclass", "source": "Fighter", "level": 3, "required": true, "options": ["Battle Master", "Champion", "Eldritch Knight", "Psi Warrior"]}
+      ]
+    },
+    "subclasses": [
+      {"name": "Battle Master", "short_name": "Battle Master", "source": "XPHB", "level_features": {"3": ["Battle Master", "Combat Superiority", "Maneuver Options", "Student of War"]}, "subclass_options": {"maneuvers": {"choose": 3, "from": ["Ambush", "Bait and Switch", "Commander's Strike", "Commanding Presence", "Disarming Attack", "Distracting Strike", "Evasive Footwork", "Feinting Attack", "Goading Attack", "Lunging Attack", "Maneuvering Attack", "Menacing Attack", "Parry", "Precision Attack", "Pushing Attack", "Rally", "Riposte", "Sweeping Attack", "Tactical Assessment", "Trip Attack"]}, "maneuver_save_ability": ["Strength", "Dexterity"], "student_of_war_skill": {"choose": 1, "from": "class_skill_options"}, "student_of_war_tool": {"choose": 1, "from": ["Alchemist's Supplies", "Brewer's Supplies", "Calligrapher's Supplies", "Carpenter's Tools", "Cartographer's Tools", "Cobbler's Tools", "Cook's Utensils", "Glassblower's Tools", "Jeweler's Tools", "Leatherworker's Tools", "Mason's Tools", "Painter's Supplies", "Potter's Tools", "Smith's Tools", "Tinker's Tools", "Weaver's Tools", "Woodcarver's Tools"]}}, "spellcasting": null},
+      {"name": "Champion", "short_name": "Champion", "source": "XPHB", "level_features": {"3": ["Champion", "Improved Critical", "Remarkable Athlete"]}},
+      {"name": "Eldritch Knight", "short_name": "Eldritch Knight", "source": "XPHB", "level_features": {"3": ["Eldritch Knight", "War Bond", "Spellcasting"]}, "subclass_options": {}, "spellcasting": {"ability": "Intelligence", "spell_list": "Wizard", "cantrips_known": 2, "prepared_spells": 3, "spell_slots": {"1": 2}, "granted_cantrips": []}},
+      {"name": "Psi Warrior", "short_name": "Psi Warrior", "source": "XPHB", "level_features": {"3": ["Psi Warrior", "Psionic Power", "Telekinetic Adept"]}}
+    ],
+    "class_options": {
+      "fighting_style": ["Archery", "Defense", "Dueling", "Great Weapon Fighting", "Protection", "Two-Weapon Fighting"]
+    },
+    "spellcasting": null,
+    "starting_equipment": ["Chain Mail", "Shield", "Longsword", "Explorer's Pack"]
+  },
+  {
+    "name": "Rogue",
+    "hit_die": 8,
+    "primary_ability": ["Dexterity"],
+    "saving_throw_proficiencies": ["Dexterity", "Intelligence"],
+    "skill_choices": {
+      "choose": 4,
+      "from": [
+        "Acrobatics",
+        "Athletics",
+        "Deception",
+        "Insight",
+        "Intimidation",
+        "Investigation",
+        "Perception",
+        "Performance",
+        "Persuasion",
+        "Sleight of Hand",
+        "Stealth"
+      ]
+    },
+    "armor_proficiencies": ["Light Armor"],
+    "weapon_proficiencies": ["Simple Weapons", "Hand Crossbows", "Longswords", "Rapiers", "Shortswords"],
+    "tool_proficiencies": ["Thieves' Tools"],
+    "level_1_features": ["Expertise", "Sneak Attack", "Thieves' Cant", "Weapon Mastery"],
+    "level_features": {
+      "1": ["Expertise", "Sneak Attack", "Thieves' Cant", "Weapon Mastery"],
+      "2": ["Cunning Action"],
+      "3": ["Rogue Subclass", "Steady Aim"]
+    },
+    "progression": {
+      "1": [
+        {"id": "rogue_1_expertise", "type": "automatic_feature", "name": "Expertise", "source": "Rogue", "level": 1},
+        {"id": "rogue_1_sneak_attack", "type": "automatic_feature", "name": "Sneak Attack", "source": "Rogue", "level": 1},
+        {"id": "rogue_1_thieves_cant", "type": "automatic_feature", "name": "Thieves' Cant", "source": "Rogue", "level": 1},
+        {"id": "rogue_1_weapon_mastery", "type": "automatic_feature", "name": "Weapon Mastery", "source": "Rogue", "level": 1}
+      ],
+      "2": [
+        {"id": "rogue_2_cunning_action", "type": "automatic_feature", "name": "Cunning Action", "source": "Rogue", "level": 2}
+      ],
+      "3": [
+        {"id": "rogue_3_rogue_subclass", "type": "subclass_choice", "name": "Rogue Subclass", "source": "Rogue", "level": 3, "required": true, "options": ["Arcane Trickster", "Assassin", "Soulknife", "Thief"]},
+        {"id": "rogue_3_steady_aim", "type": "automatic_feature", "name": "Steady Aim", "source": "Rogue", "level": 3}
+      ]
+    },
+    "subclasses": [
+      {"name": "Arcane Trickster", "short_name": "Arcane Trickster", "source": "XPHB", "level_features": {"3": ["Arcane Trickster", "Mage Hand Legerdemain", "Spellcasting"]}, "subclass_options": {}, "spellcasting": {"ability": "Intelligence", "spell_list": "Wizard", "cantrips_known": 2, "prepared_spells": 3, "spell_slots": {"1": 2}, "granted_cantrips": ["Mage Hand"]}},
+      {"name": "Assassin", "short_name": "Assassin", "source": "XPHB", "level_features": {"3": ["Assassin", "Assassin's Tools", "Assassinate"]}},
+      {"name": "Soulknife", "short_name": "Soulknife", "source": "XPHB", "level_features": {"3": ["Soulknife", "Psionic Power", "Psychic Blades"]}},
+      {"name": "Thief", "short_name": "Thief", "source": "XPHB", "level_features": {"3": ["Thief", "Fast Hands", "Second-Story Work"]}}
+    ],
+    "class_options": {
+      "expertise": {
+        "choose": 2,
+        "from": "skill_proficiencies"
+      }
+    },
+    "spellcasting": null,
+    "starting_equipment": ["Leather Armor", "Dagger", "Shortsword", "Thieves' Tools", "Burglar's Pack"]
+  },
+  {
+    "name": "Cleric",
+    "hit_die": 8,
+    "primary_ability": ["Wisdom"],
+    "saving_throw_proficiencies": ["Wisdom", "Charisma"],
+    "skill_choices": {
+      "choose": 2,
+      "from": ["History", "Insight", "Medicine", "Persuasion", "Religion"]
+    },
+    "armor_proficiencies": ["Light Armor", "Medium Armor", "Shields"],
+    "weapon_proficiencies": ["Simple Weapons"],
+    "tool_proficiencies": [],
+    "level_1_features": ["Spellcasting", "Divine Order"],
+    "level_features": {
+      "1": ["Spellcasting", "Divine Order"],
+      "2": ["Channel Divinity"],
+      "3": ["Cleric Subclass"]
+    },
+    "progression": {
+      "1": [
+        {"id": "cleric_1_spellcasting", "type": "automatic_feature", "name": "Spellcasting", "source": "Cleric", "level": 1},
+        {"id": "cleric_1_divine_order", "type": "automatic_feature", "name": "Divine Order", "source": "Cleric", "level": 1}
+      ],
+      "2": [
+        {"id": "cleric_2_channel_divinity", "type": "automatic_feature", "name": "Channel Divinity", "source": "Cleric", "level": 2}
+      ],
+      "3": [
+        {"id": "cleric_3_cleric_subclass", "type": "subclass_choice", "name": "Cleric Subclass", "source": "Cleric", "level": 3, "required": true, "options": ["Life Domain", "Light Domain", "Trickery Domain", "War Domain"]}
+      ]
+    },
+    "subclasses": [
+      {"name": "Life Domain", "short_name": "Life", "source": "XPHB", "level_features": {"3": ["Life Domain", "Disciple of Life", "Life Domain Spells", "Preserve Life"]}},
+      {"name": "Light Domain", "short_name": "Light", "source": "XPHB", "level_features": {"3": ["Light Domain", "Light Domain Spells", "Radiance of the Dawn", "Warding Flare"]}},
+      {"name": "Trickery Domain", "short_name": "Trickery", "source": "XPHB", "level_features": {"3": ["Trickery Domain", "Blessing of the Trickster", "Invoke Duplicity", "Trickery Domain Spells"]}},
+      {"name": "War Domain", "short_name": "War", "source": "XPHB", "level_features": {"3": ["War Domain", "Guided Strike", "War Domain Spells", "War Priest"]}}
+    ],
+    "class_options": {
+      "divine_order": ["Protector", "Thaumaturge"]
+    },
+    "spellcasting": {
+      "ability": "Wisdom",
+      "cantrips_known": 3,
+      "prepared_spells": 4,
+      "spell_list": "Cleric"
+    },
+    "starting_equipment": ["Scale Mail", "Shield", "Mace", "Holy Symbol", "Priest's Pack"]
+  },
+  {
+    "name": "Wizard",
+    "hit_die": 6,
+    "primary_ability": ["Intelligence"],
+    "saving_throw_proficiencies": ["Intelligence", "Wisdom"],
+    "skill_choices": {
+      "choose": 2,
+      "from": ["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"]
+    },
+    "armor_proficiencies": [],
+    "weapon_proficiencies": ["Daggers", "Quarterstaffs", "Light Crossbows"],
+    "tool_proficiencies": [],
+    "level_1_features": ["Spellcasting", "Arcane Recovery"],
+    "level_features": {
+      "1": ["Spellcasting", "Arcane Recovery"],
+      "2": ["Scholar"],
+      "3": ["Wizard Subclass"]
+    },
+    "progression": {
+      "1": [
+        {"id": "wizard_1_spellcasting", "type": "automatic_feature", "name": "Spellcasting", "source": "Wizard", "level": 1},
+        {"id": "wizard_1_arcane_recovery", "type": "automatic_feature", "name": "Arcane Recovery", "source": "Wizard", "level": 1}
+      ],
+      "2": [
+        {"id": "wizard_2_scholar", "type": "automatic_feature", "name": "Scholar", "source": "Wizard", "level": 2}
+      ],
+      "3": [
+        {"id": "wizard_3_wizard_subclass", "type": "subclass_choice", "name": "Wizard Subclass", "source": "Wizard", "level": 3, "required": true, "options": ["Abjurer", "Diviner", "Evoker", "Illusionist"]}
+      ]
+    },
+    "subclasses": [
+      {"name": "Abjurer", "short_name": "Abjurer", "source": "XPHB", "level_features": {"3": ["Abjurer", "Abjuration Savant", "Arcane Ward"]}},
+      {"name": "Diviner", "short_name": "Diviner", "source": "XPHB", "level_features": {"3": ["Diviner", "Divination Savant", "Portent"]}},
+      {"name": "Evoker", "short_name": "Evoker", "source": "XPHB", "level_features": {"3": ["Evoker", "Evocation Savant", "Potent Cantrip"]}},
+      {"name": "Illusionist", "short_name": "Illusionist", "source": "XPHB", "level_features": {"3": ["Illusionist", "Illusion Savant", "Improved Illusions"]}}
+    ],
+    "class_options": {},
+    "spellcasting": {
+      "ability": "Intelligence",
+      "cantrips_known": 3,
+      "known_spells": 6,
+      "spell_list": "Wizard"
+    },
+    "starting_equipment": ["Quarterstaff", "Spellbook", "Arcane Focus", "Scholar's Pack"]
+  }
+]

@@ -1,0 +1,2453 @@
+{
+  "generated_from": [
+    "data/imported/5etools/classes.json",
+    "data/coverage/level_9_12_feature_choice_map.json"
+  ],
+  "level_range": [
+    8,
+    12
+  ],
+  "classes": {
+    "barbarian": {
+      "class": "Barbarian",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "rages": 4,
+          "rage_damage": 2,
+          "weapon_mastery_count": 3,
+          "armor_class_formula": "10 + Dexterity + Constitution"
+        },
+        "spellcasting": {}
+      },
+      "levels": {
+        "9": {
+          "features": [
+            "Brutal Strike"
+          ],
+          "required_choices": [
+            {
+              "id": "barbarian_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "rage_damage": {
+              "before": 2,
+              "after": 3
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": []
+        },
+        "10": {
+          "features": [
+            "Subclass Feature"
+          ],
+          "required_choices": [
+            {
+              "id": "barbarian_10_subclass_feature",
+              "choice_type": "subclass_feature_gain",
+              "handler": "rules.level_up.classify_level_features",
+              "status": "generic_ready"
+            },
+            {
+              "id": "barbarian_10_weapon_mastery",
+              "choice_type": "weapon_mastery_selection",
+              "handler": "rules.level_up.weapon_mastery_level_up_choice",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "weapon_mastery_count": {
+              "before": 3,
+              "after": 4
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": [
+            {
+              "subclass": "Path of the Berserker",
+              "features": [
+                "Retaliation"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Path of the Wild Heart",
+              "features": [
+                "Nature Speaker"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Path of the World Tree",
+              "features": [
+                "Battering Roots"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Path of the Zealot",
+              "features": [
+                "Zealous Presence"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "11": {
+          "features": [
+            "Relentless Rage"
+          ],
+          "required_choices": [],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": []
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "barbarian_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "rages": {
+              "before": 4,
+              "after": 5
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": []
+        }
+      }
+    },
+    "bard": {
+      "class": "Bard",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "bardic_die": "1d8",
+          "spell_slots": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        },
+        "spellcasting": {
+          "ability": "Charisma",
+          "cantrips_known": 3,
+          "prepared_spells": 12,
+          "spell_list": "Bard",
+          "spell_slots": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        }
+      },
+      "levels": {
+        "9": {
+          "features": [
+            "Expertise"
+          ],
+          "required_choices": [
+            {
+              "id": "bard_9_expertise",
+              "choice_type": "expertise_choice",
+              "handler": "rules.class_choice_rules.bard_level_9_expertise",
+              "status": "generic_ready"
+            },
+            {
+              "id": "bard_9_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            },
+            {
+              "id": "bard_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 12,
+              "after": 14
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "10": {
+          "features": [
+            "Magical Secrets"
+          ],
+          "required_choices": [
+            {
+              "id": "bard_10_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "bardic_die": {
+              "before": "1d8",
+              "after": "1d10"
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "cantrips_known": {
+              "before": 3,
+              "after": 4
+            },
+            "prepared_spells": {
+              "before": 14,
+              "after": 15
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "11": {
+          "features": [],
+          "required_choices": [
+            {
+              "id": "bard_11_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 15,
+              "after": 16
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "bard_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": []
+        }
+      }
+    },
+    "cleric": {
+      "class": "Cleric",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "channel_divinity": 3,
+          "spell_slots": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        },
+        "spellcasting": {
+          "ability": "Wisdom",
+          "cantrips_known": 4,
+          "prepared_spells": 12,
+          "spell_list": "Cleric",
+          "spell_slots": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        }
+      },
+      "levels": {
+        "9": {
+          "features": [],
+          "required_choices": [
+            {
+              "id": "cleric_9_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            },
+            {
+              "id": "cleric_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 12,
+              "after": 14
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              }
+            }
+          },
+          "subclass_features": [
+            {
+              "subclass": "Life Domain",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Light Domain",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Trickery Domain",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "War Domain",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "10": {
+          "features": [
+            "Divine Intervention"
+          ],
+          "required_choices": [
+            {
+              "id": "cleric_10_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "cantrips_known": {
+              "before": 4,
+              "after": 5
+            },
+            "prepared_spells": {
+              "before": 14,
+              "after": 15
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "11": {
+          "features": [],
+          "required_choices": [
+            {
+              "id": "cleric_11_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 15,
+              "after": 16
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "cleric_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": []
+        }
+      }
+    },
+    "druid": {
+      "class": "Druid",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "wild_shape": 3,
+          "spell_slots": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        },
+        "spellcasting": {
+          "ability": "Wisdom",
+          "cantrips_known": 3,
+          "prepared_spells": 12,
+          "spell_list": "Druid",
+          "spell_slots": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        }
+      },
+      "levels": {
+        "9": {
+          "features": [],
+          "required_choices": [
+            {
+              "id": "druid_9_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            },
+            {
+              "id": "druid_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 12,
+              "after": 14
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              }
+            }
+          },
+          "subclass_features": [
+            {
+              "subclass": "Circle of the Moon",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Circle of the Sea",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "10": {
+          "features": [
+            "Subclass Feature"
+          ],
+          "required_choices": [
+            {
+              "id": "druid_10_subclass_feature",
+              "choice_type": "subclass_feature_gain",
+              "handler": "rules.level_up.classify_level_features",
+              "status": "generic_ready"
+            },
+            {
+              "id": "druid_10_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "cantrips_known": {
+              "before": 3,
+              "after": 4
+            },
+            "prepared_spells": {
+              "before": 14,
+              "after": 15
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              }
+            }
+          },
+          "subclass_features": [
+            {
+              "subclass": "Circle of the Land",
+              "features": [
+                "Nature's Ward"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Circle of the Moon",
+              "features": [
+                "Moonlight Step"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Circle of the Sea",
+              "features": [
+                "Stormborn"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Circle of the Stars",
+              "features": [
+                "Twinkling Constellations"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "11": {
+          "features": [],
+          "required_choices": [
+            {
+              "id": "druid_11_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 15,
+              "after": 16
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "druid_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": []
+        }
+      }
+    },
+    "fighter": {
+      "class": "Fighter",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "second_wind": 3,
+          "weapon_mastery_count": 4
+        },
+        "spellcasting": {}
+      },
+      "levels": {
+        "9": {
+          "features": [
+            "Indomitable",
+            "Tactical Master"
+          ],
+          "required_choices": [
+            {
+              "id": "fighter_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": [
+            {
+              "subclass": "Psi Warrior",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "10": {
+          "features": [
+            "Subclass Feature"
+          ],
+          "required_choices": [
+            {
+              "id": "fighter_10_subclass_feature",
+              "choice_type": "subclass_feature_gain",
+              "handler": "rules.level_up.classify_level_features",
+              "status": "generic_ready"
+            },
+            {
+              "id": "fighter_10_weapon_mastery",
+              "choice_type": "weapon_mastery_selection",
+              "handler": "rules.level_up.weapon_mastery_level_up_choice",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "second_wind": {
+              "before": 3,
+              "after": 4
+            },
+            "weapon_mastery_count": {
+              "before": 4,
+              "after": 5
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": [
+            {
+              "subclass": "Battle Master",
+              "features": [
+                "Improved Combat Superiority"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Champion",
+              "features": [
+                "Heroic Warrior"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Eldritch Knight",
+              "features": [
+                "Eldritch Strike"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Psi Warrior",
+              "features": [
+                "Guarded Mind"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "11": {
+          "features": [
+            "Two Extra Attacks"
+          ],
+          "required_choices": [],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": [
+            {
+              "subclass": "Psi Warrior",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "fighter_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": [
+            {
+              "subclass": "Psi Warrior",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        }
+      }
+    },
+    "monk": {
+      "class": "Monk",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "martial_arts_die": "1d8",
+          "focus_points": 8,
+          "unarmored_movement": 15,
+          "armor_class_formula": "10 + Dexterity + Wisdom"
+        },
+        "spellcasting": {}
+      },
+      "levels": {
+        "9": {
+          "features": [
+            "Acrobatic Movement"
+          ],
+          "required_choices": [
+            {
+              "id": "monk_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "focus_points": {
+              "before": 8,
+              "after": 9
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": []
+        },
+        "10": {
+          "features": [
+            "Heightened Focus",
+            "Self-Restoration"
+          ],
+          "required_choices": [],
+          "resource_changes": {
+            "focus_points": {
+              "before": 9,
+              "after": 10
+            },
+            "unarmored_movement": {
+              "before": 15,
+              "after": 20
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": []
+        },
+        "11": {
+          "features": [
+            "Subclass Feature"
+          ],
+          "required_choices": [
+            {
+              "id": "monk_11_subclass_feature",
+              "choice_type": "subclass_feature_gain",
+              "handler": "rules.level_up.classify_level_features",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "focus_points": {
+              "before": 10,
+              "after": 11
+            },
+            "martial_arts_die": {
+              "before": "1d8",
+              "after": "1d10"
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": [
+            {
+              "subclass": "Warrior of Mercy",
+              "features": [
+                "Flurry of Healing and Harm"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Warrior of Shadow",
+              "features": [
+                "Improved Shadow Step"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Warrior of the Elements",
+              "features": [
+                "Stride of the Elements"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Warrior of the Open Hand",
+              "features": [
+                "Fleet Step"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "monk_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "focus_points": {
+              "before": 11,
+              "after": 12
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": []
+        }
+      }
+    },
+    "paladin": {
+      "class": "Paladin",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "lay_on_hands_pool": 40,
+          "weapon_mastery_count": 2,
+          "spell_slots": {
+            "1": 4,
+            "2": 3
+          },
+          "channel_divinity": 2
+        },
+        "spellcasting": {
+          "ability": "Charisma",
+          "cantrips_known": 0,
+          "prepared_spells": 7,
+          "spell_list": "Paladin",
+          "spell_slots": {
+            "1": 4,
+            "2": 3
+          }
+        }
+      },
+      "levels": {
+        "9": {
+          "features": [
+            "Abjure Foes"
+          ],
+          "required_choices": [
+            {
+              "id": "paladin_9_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            },
+            {
+              "id": "paladin_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "lay_on_hands_pool": {
+              "before": 40,
+              "after": 45
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 2
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 7,
+              "after": 9
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 2
+              }
+            }
+          },
+          "subclass_features": [
+            {
+              "subclass": "Oath of Devotion",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Oath of Glory",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Oath of Vengeance",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Oath of the Ancients",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "10": {
+          "features": [
+            "Aura of Courage"
+          ],
+          "required_choices": [],
+          "resource_changes": {
+            "lay_on_hands_pool": {
+              "before": 45,
+              "after": 50
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": []
+        },
+        "11": {
+          "features": [
+            "Radiant Strikes"
+          ],
+          "required_choices": [
+            {
+              "id": "paladin_11_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "channel_divinity": {
+              "before": 2,
+              "after": 3
+            },
+            "lay_on_hands_pool": {
+              "before": 50,
+              "after": 55
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 9,
+              "after": 10
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "paladin_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "lay_on_hands_pool": {
+              "before": 55,
+              "after": 60
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": []
+        }
+      }
+    },
+    "ranger": {
+      "class": "Ranger",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "favored_enemy": 3,
+          "weapon_mastery_count": 2,
+          "spell_slots": {
+            "1": 4,
+            "2": 3
+          }
+        },
+        "spellcasting": {
+          "ability": "Wisdom",
+          "cantrips_known": 0,
+          "prepared_spells": 7,
+          "spell_list": "Ranger",
+          "spell_slots": {
+            "1": 4,
+            "2": 3
+          }
+        }
+      },
+      "levels": {
+        "9": {
+          "features": [
+            "Expertise"
+          ],
+          "required_choices": [
+            {
+              "id": "ranger_9_expertise",
+              "choice_type": "expertise_choice",
+              "handler": "rules.class_choice_rules.ranger_level_9_expertise",
+              "status": "generic_ready"
+            },
+            {
+              "id": "ranger_9_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            },
+            {
+              "id": "ranger_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "favored_enemy": {
+              "before": 3,
+              "after": 4
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 2
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 7,
+              "after": 9
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 2
+              }
+            }
+          },
+          "subclass_features": [
+            {
+              "subclass": "Fey Wanderer",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Gloom Stalker",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "10": {
+          "features": [
+            "Tireless"
+          ],
+          "required_choices": [],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": []
+        },
+        "11": {
+          "features": [
+            "Subclass Feature"
+          ],
+          "required_choices": [
+            {
+              "id": "ranger_11_subclass_feature",
+              "choice_type": "subclass_feature_gain",
+              "handler": "rules.level_up.classify_level_features",
+              "status": "generic_ready"
+            },
+            {
+              "id": "ranger_11_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 9,
+              "after": 10
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3
+              }
+            }
+          },
+          "subclass_features": [
+            {
+              "subclass": "Beast Master",
+              "features": [
+                "Bestial Fury"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Fey Wanderer",
+              "features": [
+                "Fey Reinforcements"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Gloom Stalker",
+              "features": [
+                "Stalker's Flurry"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Hunter",
+              "features": [
+                "Superior Hunter's Prey"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "ranger_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": []
+        }
+      }
+    },
+    "rogue": {
+      "class": "Rogue",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "sneak_attack": "4d6",
+          "weapon_mastery_count": 2
+        },
+        "spellcasting": {}
+      },
+      "levels": {
+        "9": {
+          "features": [
+            "Subclass Feature"
+          ],
+          "required_choices": [
+            {
+              "id": "rogue_9_subclass_feature",
+              "choice_type": "subclass_feature_gain",
+              "handler": "rules.level_up.classify_level_features",
+              "status": "generic_ready"
+            },
+            {
+              "id": "rogue_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "sneak_attack": {
+              "before": "4d6",
+              "after": "5d6"
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": [
+            {
+              "subclass": "Arcane Trickster",
+              "features": [
+                "Magical Ambush"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Assassin",
+              "features": [
+                "Infiltration Expertise"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Soulknife",
+              "features": [
+                "Homing Strikes",
+                "Psychic Teleportation",
+                "Soul Blades"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Thief",
+              "features": [
+                "Supreme Sneak"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "10": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "rogue_10_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": [
+            {
+              "subclass": "Soulknife",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "11": {
+          "features": [
+            "Improved Cunning Strike"
+          ],
+          "required_choices": [],
+          "resource_changes": {
+            "sneak_attack": {
+              "before": "5d6",
+              "after": "6d6"
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": [
+            {
+              "subclass": "Soulknife",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "rogue_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {},
+          "spellcasting_changes": {},
+          "subclass_features": [
+            {
+              "subclass": "Soulknife",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        }
+      }
+    },
+    "sorcerer": {
+      "class": "Sorcerer",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "sorcery_points": 8,
+          "spell_slots": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        },
+        "spellcasting": {
+          "ability": "Charisma",
+          "cantrips_known": 5,
+          "prepared_spells": 12,
+          "spell_list": "Sorcerer",
+          "spell_slots": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        }
+      },
+      "levels": {
+        "9": {
+          "features": [],
+          "required_choices": [
+            {
+              "id": "sorcerer_9_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            },
+            {
+              "id": "sorcerer_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "sorcery_points": {
+              "before": 8,
+              "after": 9
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 12,
+              "after": 14
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              }
+            }
+          },
+          "subclass_features": [
+            {
+              "subclass": "Aberrant Sorcery",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Clockwork Sorcery",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Draconic Sorcery",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "10": {
+          "features": [
+            "Metamagic"
+          ],
+          "required_choices": [
+            {
+              "id": "sorcerer_10_metamagic",
+              "choice_type": "metamagic_choice",
+              "handler": "rules.class_choice_rules.metamagic",
+              "status": "generic_ready"
+            },
+            {
+              "id": "sorcerer_10_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "sorcery_points": {
+              "before": 9,
+              "after": 10
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "cantrips_known": {
+              "before": 5,
+              "after": 6
+            },
+            "prepared_spells": {
+              "before": 14,
+              "after": 15
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "11": {
+          "features": [],
+          "required_choices": [
+            {
+              "id": "sorcerer_11_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "sorcery_points": {
+              "before": 10,
+              "after": 11
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 15,
+              "after": 16
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "sorcerer_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "sorcery_points": {
+              "before": 11,
+              "after": 12
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": []
+        }
+      }
+    },
+    "warlock": {
+      "class": "Warlock",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "eldritch_invocations": 6,
+          "spell_slots": {
+            "4": 2
+          },
+          "pact_slot_level": 4,
+          "spell_slot_count": 2
+        },
+        "spellcasting": {
+          "ability": "Charisma",
+          "cantrips_known": 3,
+          "prepared_spells": 9,
+          "spell_list": "Warlock",
+          "spell_slots": {
+            "4": 2
+          }
+        }
+      },
+      "levels": {
+        "9": {
+          "features": [
+            "Contact Patron"
+          ],
+          "required_choices": [
+            {
+              "id": "warlock_9_eldritch_invocations",
+              "choice_type": "invocation_choice",
+              "handler": "rules.class_choice_rules.eldritch_invocations",
+              "status": "generic_ready"
+            },
+            {
+              "id": "warlock_9_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            },
+            {
+              "id": "warlock_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "eldritch_invocations": {
+              "before": 6,
+              "after": 7
+            },
+            "pact_slot_level": {
+              "before": 4,
+              "after": 5
+            },
+            "spell_slots": {
+              "before": {
+                "4": 2
+              },
+              "after": {
+                "5": 2
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 9,
+              "after": 10
+            },
+            "spell_slots": {
+              "before": {
+                "4": 2
+              },
+              "after": {
+                "5": 2
+              }
+            }
+          },
+          "subclass_features": [
+            {
+              "subclass": "Archfey Patron",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Celestial Patron",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Fiend Patron",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Great Old One Patron",
+              "features": [],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "10": {
+          "features": [
+            "Subclass Feature"
+          ],
+          "required_choices": [
+            {
+              "id": "warlock_10_subclass_feature",
+              "choice_type": "subclass_feature_gain",
+              "handler": "rules.level_up.classify_level_features",
+              "status": "generic_ready"
+            },
+            {
+              "id": "warlock_10_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {},
+          "spellcasting_changes": {
+            "cantrips_known": {
+              "before": 3,
+              "after": 4
+            }
+          },
+          "subclass_features": [
+            {
+              "subclass": "Archfey Patron",
+              "features": [
+                "Beguiling Defenses"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Celestial Patron",
+              "features": [
+                "Celestial Resilience"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Fiend Patron",
+              "features": [
+                "Fiendish Resilience"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Great Old One Patron",
+              "features": [
+                "Eldritch Hex",
+                "Thought Shield"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "11": {
+          "features": [
+            "Mystic Arcanum"
+          ],
+          "required_choices": [
+            {
+              "id": "warlock_11_mystic_arcanum",
+              "choice_type": "mystic_arcanum_spell_choice",
+              "handler": "rules.mystic_arcanum.mystic_arcanum_options",
+              "status": "generic_ready"
+            },
+            {
+              "id": "warlock_11_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slot_count": {
+              "before": 2,
+              "after": 3
+            },
+            "spell_slots": {
+              "before": {
+                "5": 2
+              },
+              "after": {
+                "5": 3
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "prepared_spells": {
+              "before": 10,
+              "after": 11
+            },
+            "spell_slots": {
+              "before": {
+                "5": 2
+              },
+              "after": {
+                "5": 3
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "warlock_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            },
+            {
+              "id": "warlock_12_eldritch_invocations",
+              "choice_type": "invocation_choice",
+              "handler": "rules.class_choice_rules.eldritch_invocations",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "eldritch_invocations": {
+              "before": 7,
+              "after": 8
+            }
+          },
+          "spellcasting_changes": {},
+          "subclass_features": []
+        }
+      }
+    },
+    "wizard": {
+      "class": "Wizard",
+      "baseline": {
+        "level": 8,
+        "resources": {
+          "arcane_recovery_levels": 1,
+          "spell_slots": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        },
+        "spellcasting": {
+          "ability": "Intelligence",
+          "cantrips_known": 4,
+          "spell_list": "Wizard",
+          "known_spells": 20,
+          "spell_slots": {
+            "1": 4,
+            "2": 3,
+            "3": 3,
+            "4": 2
+          }
+        }
+      },
+      "levels": {
+        "9": {
+          "features": [],
+          "required_choices": [
+            {
+              "id": "wizard_9_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            },
+            {
+              "id": "wizard_9_ritual_caster_bonus_spells",
+              "choice_type": "feat_spell_selection",
+              "handler": "rules.level_up.ritual_caster_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "known_spells": {
+              "before": 20,
+              "after": 22
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "10": {
+          "features": [
+            "Subclass Feature"
+          ],
+          "required_choices": [
+            {
+              "id": "wizard_10_subclass_feature",
+              "choice_type": "subclass_feature_gain",
+              "handler": "rules.level_up.classify_level_features",
+              "status": "generic_ready"
+            },
+            {
+              "id": "wizard_10_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "cantrips_known": {
+              "before": 4,
+              "after": 5
+            },
+            "known_spells": {
+              "before": 22,
+              "after": 24
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 1
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              }
+            }
+          },
+          "subclass_features": [
+            {
+              "subclass": "Abjurer",
+              "features": [
+                "Spell Breaker"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Diviner",
+              "features": [
+                "The Third Eye"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Evoker",
+              "features": [
+                "Empowered Evocation"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            },
+            {
+              "subclass": "Illusionist",
+              "features": [
+                "Illusory Self"
+              ],
+              "status": "generic_ready",
+              "unsupported_features": []
+            }
+          ]
+        },
+        "11": {
+          "features": [],
+          "required_choices": [
+            {
+              "id": "wizard_11_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              }
+            }
+          },
+          "spellcasting_changes": {
+            "known_spells": {
+              "before": 24,
+              "after": 26
+            },
+            "spell_slots": {
+              "before": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2
+              },
+              "after": {
+                "1": 4,
+                "2": 3,
+                "3": 3,
+                "4": 3,
+                "5": 2,
+                "6": 1
+              }
+            }
+          },
+          "subclass_features": []
+        },
+        "12": {
+          "features": [
+            "Ability Score Improvement"
+          ],
+          "required_choices": [
+            {
+              "id": "wizard_12_ability_score_improvement",
+              "choice_type": "asi_or_feat",
+              "handler": "rules.level_up.asi_or_feat",
+              "status": "generic_ready"
+            },
+            {
+              "id": "wizard_12_spell_progression",
+              "choice_type": "spell_selection",
+              "handler": "rules.level_up.spell_level_up_choices",
+              "status": "generic_ready"
+            }
+          ],
+          "resource_changes": {},
+          "spellcasting_changes": {
+            "known_spells": {
+              "before": 26,
+              "after": 28
+            }
+          },
+          "subclass_features": []
+        }
+      }
+    }
+  },
+  "summary": {
+    "class_count": 12,
+    "level_count_per_class": 5,
+    "partial_support_items": []
+  }
+}

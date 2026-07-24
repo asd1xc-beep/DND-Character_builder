@@ -1,0 +1,925 @@
+{
+  "barbarian_berserker_xphb": {
+    "class_name": "Barbarian",
+    "subclass_name": "Path of the Berserker",
+    "subclass_short_name": "Berserker",
+    "source": "XPHB",
+    "level_3_features": [
+      "Path of the Berserker",
+      "Frenzy"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "barbarian_wild_heart_xphb": {
+    "class_name": "Barbarian",
+    "subclass_name": "Path of the Wild Heart",
+    "subclass_short_name": "Wild Heart",
+    "source": "XPHB",
+    "level_3_features": [
+      "Path of the Wild Heart",
+      "Animal Speaker",
+      "Rage of the Wilds"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "barbarian_world_tree_xphb": {
+    "class_name": "Barbarian",
+    "subclass_name": "Path of the World Tree",
+    "subclass_short_name": "World Tree",
+    "source": "XPHB",
+    "level_3_features": [
+      "Path of the World Tree",
+      "Vitality of the Tree"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "barbarian_zealot_xphb": {
+    "class_name": "Barbarian",
+    "subclass_name": "Path of the Zealot",
+    "subclass_short_name": "Zealot",
+    "source": "XPHB",
+    "level_3_features": [
+      "Path of the Zealot",
+      "Divine Fury",
+      "Warrior of the Gods"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "bard_dance_xphb": {
+    "class_name": "Bard",
+    "subclass_name": "College of Dance",
+    "subclass_short_name": "Dance",
+    "source": "XPHB",
+    "level_3_features": [
+      "College of Dance",
+      "Agile Strikes",
+      "Bardic Damage",
+      "Dance Virtuoso",
+      "Dazzling Footwork",
+      "Unarmored Defense"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": [
+      "Unarmored Defense and Agile Strikes are visible as feature text; detailed combat automation is not implemented."
+    ]
+  },
+  "bard_glamour_xphb": {
+    "class_name": "Bard",
+    "subclass_name": "College of Glamour",
+    "subclass_short_name": "Glamour",
+    "source": "XPHB",
+    "level_3_features": [
+      "College of Glamour",
+      "Beguiling Magic",
+      "Mantle of Inspiration"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "bard_lore_xphb": {
+    "class_name": "Bard",
+    "subclass_name": "College of Lore",
+    "subclass_short_name": "Lore",
+    "source": "XPHB",
+    "level_3_features": [
+      "College of Lore",
+      "Bonus Proficiencies",
+      "Cutting Words"
+    ],
+    "features_imported": true,
+    "choice_types": [
+      "lore_skills"
+    ],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": [
+      "Bonus Proficiencies are supported as skill choices. Cutting Words is tracked as feature text."
+    ]
+  },
+  "bard_valor_xphb": {
+    "class_name": "Bard",
+    "subclass_name": "College of Valor",
+    "subclass_short_name": "Valor",
+    "source": "XPHB",
+    "level_3_features": [
+      "College of Valor",
+      "Combat Inspiration",
+      "Martial Training"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "cleric_life_xphb": {
+    "class_name": "Cleric",
+    "subclass_name": "Life Domain",
+    "subclass_short_name": "Life",
+    "source": "XPHB",
+    "level_3_features": [
+      "Life Domain",
+      "Disciple of Life",
+      "Life Domain Spells",
+      "Preserve Life"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": true,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "cleric_light_xphb": {
+    "class_name": "Cleric",
+    "subclass_name": "Light Domain",
+    "subclass_short_name": "Light",
+    "source": "XPHB",
+    "level_3_features": [
+      "Light Domain",
+      "Light Domain Spells",
+      "Radiance of the Dawn",
+      "Warding Flare"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": true,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "cleric_trickery_xphb": {
+    "class_name": "Cleric",
+    "subclass_name": "Trickery Domain",
+    "subclass_short_name": "Trickery",
+    "source": "XPHB",
+    "level_3_features": [
+      "Trickery Domain",
+      "Blessing of the Trickster",
+      "Invoke Duplicity",
+      "Trickery Domain Spells"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "cleric_war_xphb": {
+    "class_name": "Cleric",
+    "subclass_name": "War Domain",
+    "subclass_short_name": "War",
+    "source": "XPHB",
+    "level_3_features": [
+      "War Domain",
+      "Guided Strike",
+      "War Domain Spells",
+      "War Priest"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": true,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "druid_land_xphb": {
+    "class_name": "Druid",
+    "subclass_name": "Circle of the Land",
+    "subclass_short_name": "Land",
+    "source": "XPHB",
+    "level_3_features": [
+      "Circle of the Land",
+      "Circle of the Land Spells",
+      "Land's Aid"
+    ],
+    "features_imported": true,
+    "choice_types": [
+      "structured_spell_choice"
+    ],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": [
+      "Land spell group choice is supported and only the selected group is granted."
+    ]
+  },
+  "druid_moon_xphb": {
+    "class_name": "Druid",
+    "subclass_name": "Circle of the Moon",
+    "subclass_short_name": "Moon",
+    "source": "XPHB",
+    "level_3_features": [
+      "Circle Forms",
+      "Circle of the Moon",
+      "Circle of the Moon Spells"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "druid_sea_xphb": {
+    "class_name": "Druid",
+    "subclass_name": "Circle of the Sea",
+    "subclass_short_name": "Sea",
+    "source": "XPHB",
+    "level_3_features": [
+      "Circle of the Sea",
+      "Circle of the Sea Spells",
+      "Wrath of the Sea"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "druid_stars_xphb": {
+    "class_name": "Druid",
+    "subclass_name": "Circle of the Stars",
+    "subclass_short_name": "Stars",
+    "source": "XPHB",
+    "level_3_features": [
+      "Circle of the Stars",
+      "Star Map",
+      "Starry Form",
+      "Archer",
+      "Chalice",
+      "Dragon"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "fighter_battle_master_xphb": {
+    "class_name": "Fighter",
+    "subclass_name": "Battle Master",
+    "subclass_short_name": "Battle Master",
+    "source": "XPHB",
+    "level_3_features": [
+      "Battle Master",
+      "Combat Superiority",
+      "Maneuver Options",
+      "Student of War"
+    ],
+    "features_imported": true,
+    "choice_types": [
+      "maneuver_save_ability",
+      "maneuvers",
+      "student_of_war_skill",
+      "student_of_war_tool"
+    ],
+    "required_choices_supported": true,
+    "resource_progression_supported": true,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": [
+      "Maneuver choices, save ability, Student of War skill, and tool are supported."
+    ]
+  },
+  "fighter_champion_xphb": {
+    "class_name": "Fighter",
+    "subclass_name": "Champion",
+    "subclass_short_name": "Champion",
+    "source": "XPHB",
+    "level_3_features": [
+      "Champion",
+      "Improved Critical",
+      "Remarkable Athlete"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "fighter_eldritch_knight_xphb": {
+    "class_name": "Fighter",
+    "subclass_name": "Eldritch Knight",
+    "subclass_short_name": "Eldritch Knight",
+    "source": "XPHB",
+    "level_3_features": [
+      "Eldritch Knight",
+      "Spellcasting",
+      "War Bond"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "fighter_psi_warrior_xphb": {
+    "class_name": "Fighter",
+    "subclass_name": "Psi Warrior",
+    "subclass_short_name": "Psi Warrior",
+    "source": "XPHB",
+    "level_3_features": [
+      "Psi Warrior",
+      "Psionic Power",
+      "Protective Field",
+      "Psionic Strike",
+      "Telekinetic Movement"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": true,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "monk_mercy_xphb": {
+    "class_name": "Monk",
+    "subclass_name": "Warrior of Mercy",
+    "subclass_short_name": "Mercy",
+    "source": "XPHB",
+    "level_3_features": [
+      "Warrior of Mercy",
+      "Hand of Harm",
+      "Hand of Healing",
+      "Implements of Mercy"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "monk_shadow_xphb": {
+    "class_name": "Monk",
+    "subclass_name": "Warrior of Shadow",
+    "subclass_short_name": "Shadow",
+    "source": "XPHB",
+    "level_3_features": [
+      "Shadow Arts",
+      "Warrior of Shadow",
+      "Darkness",
+      "Darkvision",
+      "Shadowy Figments"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "monk_elements_xphb": {
+    "class_name": "Monk",
+    "subclass_name": "Warrior of the Elements",
+    "subclass_short_name": "Elements",
+    "source": "XPHB",
+    "level_3_features": [
+      "Elemental Attunement",
+      "Manipulate Elements",
+      "Warrior of the Elements"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "monk_open_hand_xphb": {
+    "class_name": "Monk",
+    "subclass_name": "Warrior of the Open Hand",
+    "subclass_short_name": "Open Hand",
+    "source": "XPHB",
+    "level_3_features": [
+      "Open Hand Technique",
+      "Warrior of the Open Hand"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "paladin_devotion_xphb": {
+    "class_name": "Paladin",
+    "subclass_name": "Oath of Devotion",
+    "subclass_short_name": "Devotion",
+    "source": "XPHB",
+    "level_3_features": [
+      "Oath of Devotion",
+      "Oath of Devotion Spells",
+      "Sacred Weapon"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "paladin_glory_xphb": {
+    "class_name": "Paladin",
+    "subclass_name": "Oath of Glory",
+    "subclass_short_name": "Glory",
+    "source": "XPHB",
+    "level_3_features": [
+      "Inspiring Smite",
+      "Oath of Glory",
+      "Oath of Glory Spells",
+      "Peerless Athlete"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "paladin_vengeance_xphb": {
+    "class_name": "Paladin",
+    "subclass_name": "Oath of Vengeance",
+    "subclass_short_name": "Vengeance",
+    "source": "XPHB",
+    "level_3_features": [
+      "Oath of Vengeance",
+      "Oath of Vengeance Spells",
+      "Vow of Enmity"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "paladin_ancients_xphb": {
+    "class_name": "Paladin",
+    "subclass_name": "Oath of the Ancients",
+    "subclass_short_name": "Ancients",
+    "source": "XPHB",
+    "level_3_features": [
+      "Nature's Wrath",
+      "Oath of the Ancients",
+      "Oath of the Ancients Spells"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "ranger_beast_master_xphb": {
+    "class_name": "Ranger",
+    "subclass_name": "Beast Master",
+    "subclass_short_name": "Beast Master",
+    "source": "XPHB",
+    "level_3_features": [
+      "Beast Master",
+      "Primal Companion"
+    ],
+    "features_imported": true,
+    "choice_types": [
+      "primal_companion"
+    ],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": [
+      "Primal Companion stat-block choice is supported; companion sheet/stat automation is not implemented."
+    ]
+  },
+  "ranger_fey_wanderer_xphb": {
+    "class_name": "Ranger",
+    "subclass_name": "Fey Wanderer",
+    "subclass_short_name": "Fey Wanderer",
+    "source": "XPHB",
+    "level_3_features": [
+      "Fey Wanderer",
+      "Dreadful Strikes",
+      "Fey Wanderer Spells",
+      "Otherworldly Glamour"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "ranger_gloom_stalker_xphb": {
+    "class_name": "Ranger",
+    "subclass_name": "Gloom Stalker",
+    "subclass_short_name": "Gloom Stalker",
+    "source": "XPHB",
+    "level_3_features": [
+      "Dread Ambusher",
+      "Gloom Stalker",
+      "Gloom Stalker Spells",
+      "Umbral Sight"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "ranger_hunter_xphb": {
+    "class_name": "Ranger",
+    "subclass_name": "Hunter",
+    "subclass_short_name": "Hunter",
+    "source": "XPHB",
+    "level_3_features": [
+      "Hunter",
+      "Hunter's Lore",
+      "Hunter's Prey"
+    ],
+    "features_imported": true,
+    "choice_types": [
+      "hunters_prey"
+    ],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": [
+      "Hunter's Prey choice is supported; combat workflow automation is not implemented."
+    ]
+  },
+  "rogue_arcane_trickster_xphb": {
+    "class_name": "Rogue",
+    "subclass_name": "Arcane Trickster",
+    "subclass_short_name": "Arcane Trickster",
+    "source": "XPHB",
+    "level_3_features": [
+      "Arcane Trickster",
+      "Mage Hand Legerdemain",
+      "Spellcasting"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "rogue_assassin_xphb": {
+    "class_name": "Rogue",
+    "subclass_name": "Assassin",
+    "subclass_short_name": "Assassin",
+    "source": "XPHB",
+    "level_3_features": [
+      "Assassin",
+      "Assassin's Tools",
+      "Assassinate"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": true,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "rogue_soulknife_xphb": {
+    "class_name": "Rogue",
+    "subclass_name": "Soulknife",
+    "subclass_short_name": "Soulknife",
+    "source": "XPHB",
+    "level_3_features": [
+      "Soulknife",
+      "Psionic Power",
+      "Psychic Blades",
+      "Psi-Bolstered Knack",
+      "Psychic Whispers"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": true,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "rogue_thief_xphb": {
+    "class_name": "Rogue",
+    "subclass_name": "Thief",
+    "subclass_short_name": "Thief",
+    "source": "XPHB",
+    "level_3_features": [
+      "Fast Hands",
+      "Second-Story Work",
+      "Thief"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": true,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "sorcerer_aberrant_xphb": {
+    "class_name": "Sorcerer",
+    "subclass_name": "Aberrant Sorcery",
+    "subclass_short_name": "Aberrant",
+    "source": "XPHB",
+    "level_3_features": [
+      "Aberrant Sorcery",
+      "Psionic Spells",
+      "Telepathic Speech"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "sorcerer_clockwork_xphb": {
+    "class_name": "Sorcerer",
+    "subclass_name": "Clockwork Sorcery",
+    "subclass_short_name": "Clockwork",
+    "source": "XPHB",
+    "level_3_features": [
+      "Clockwork Sorcery",
+      "Clockwork Spells",
+      "Restore Balance"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "sorcerer_draconic_xphb": {
+    "class_name": "Sorcerer",
+    "subclass_name": "Draconic Sorcery",
+    "subclass_short_name": "Draconic",
+    "source": "XPHB",
+    "level_3_features": [
+      "Draconic Sorcery",
+      "Draconic Spells",
+      "Draconic Resilience"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "sorcerer_wild_magic_xphb": {
+    "class_name": "Sorcerer",
+    "subclass_name": "Wild Magic Sorcery",
+    "subclass_short_name": "Wild Magic",
+    "source": "XPHB",
+    "level_3_features": [
+      "Wild Magic Sorcery",
+      "Tides of Chaos",
+      "Wild Magic Surge"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "warlock_archfey_xphb": {
+    "class_name": "Warlock",
+    "subclass_name": "Archfey Patron",
+    "subclass_short_name": "Archfey",
+    "source": "XPHB",
+    "level_3_features": [
+      "Archfey Patron",
+      "Archfey Spells",
+      "Steps of the Fey"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "warlock_celestial_xphb": {
+    "class_name": "Warlock",
+    "subclass_name": "Celestial Patron",
+    "subclass_short_name": "Celestial",
+    "source": "XPHB",
+    "level_3_features": [
+      "Celestial Patron",
+      "Celestial Spells",
+      "Healing Light"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "warlock_fiend_xphb": {
+    "class_name": "Warlock",
+    "subclass_name": "Fiend Patron",
+    "subclass_short_name": "Fiend",
+    "source": "XPHB",
+    "level_3_features": [
+      "Fiend Patron",
+      "Dark One's Blessing",
+      "Fiend Spells"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "warlock_great_old_one_xphb": {
+    "class_name": "Warlock",
+    "subclass_name": "Great Old One Patron",
+    "subclass_short_name": "Great Old One",
+    "source": "XPHB",
+    "level_3_features": [
+      "Great Old One Patron",
+      "Awakened Mind",
+      "Great Old One Spells",
+      "Psychic Spells"
+    ],
+    "features_imported": true,
+    "choice_types": [],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": []
+  },
+  "wizard_abjurer_xphb": {
+    "class_name": "Wizard",
+    "subclass_name": "Abjurer",
+    "subclass_short_name": "Abjurer",
+    "source": "XPHB",
+    "level_3_features": [
+      "Abjurer",
+      "Abjuration Savant",
+      "Arcane Ward"
+    ],
+    "features_imported": true,
+    "choice_types": [
+      "savant_spells"
+    ],
+    "required_choices_supported": true,
+    "resource_progression_supported": true,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": [
+      "Savant spell choices are supported; Arcane Ward max HP is calculated."
+    ]
+  },
+  "wizard_diviner_xphb": {
+    "class_name": "Wizard",
+    "subclass_name": "Diviner",
+    "subclass_short_name": "Diviner",
+    "source": "XPHB",
+    "level_3_features": [
+      "Diviner",
+      "Divination Savant",
+      "Portent"
+    ],
+    "features_imported": true,
+    "choice_types": [
+      "savant_spells"
+    ],
+    "required_choices_supported": true,
+    "resource_progression_supported": true,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": [
+      "Savant spell choices are supported; Portent dice count is calculated."
+    ]
+  },
+  "wizard_evoker_xphb": {
+    "class_name": "Wizard",
+    "subclass_name": "Evoker",
+    "subclass_short_name": "Evoker",
+    "source": "XPHB",
+    "level_3_features": [
+      "Evoker",
+      "Evocation Savant",
+      "Potent Cantrip"
+    ],
+    "features_imported": true,
+    "choice_types": [
+      "savant_spells"
+    ],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": false,
+    "description_only_features_visible": true,
+    "notes": [
+      "Savant spell choices are supported; Potent Cantrip is feature text only."
+    ]
+  },
+  "wizard_illusionist_xphb": {
+    "class_name": "Wizard",
+    "subclass_name": "Illusionist",
+    "subclass_short_name": "Illusionist",
+    "source": "XPHB",
+    "level_3_features": [
+      "Illusionist",
+      "Illusion Savant",
+      "Improved Illusions"
+    ],
+    "features_imported": true,
+    "choice_types": [
+      "savant_spells"
+    ],
+    "required_choices_supported": true,
+    "resource_progression_supported": false,
+    "spell_grants_supported": true,
+    "description_only_features_visible": true,
+    "notes": [
+      "Savant spell choices and Minor Illusion grant are supported."
+    ]
+  }
+}
