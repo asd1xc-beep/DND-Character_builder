@@ -45,8 +45,9 @@ def validate_asi_selection(character, selection, maximum=20):
         return failed("An Ability Score Improvement must be +2 to one ability or +1 to two abilities.")
     scores = character.get("ability_scores", {})
     for ability, amount in increases.items():
-        if int(scores.get(ability, 0)) + amount > maximum:
-            return failed(f"{ability} cannot be increased above {maximum}.")
+        ability_maximum = maximum.get(ability, 20) if isinstance(maximum, dict) else maximum
+        if int(scores.get(ability, 0)) + amount > ability_maximum:
+            return failed(f"{ability} cannot be increased above {ability_maximum}.")
     return {"ok": True, "message": ""}
 
 

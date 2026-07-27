@@ -19,7 +19,11 @@ from rules.feat_grants import (
 from rules.feature_spell_grants import feature_spell_grant_records
 from rules.feature_configurations import configured_feature_values, refresh_feature_configurations
 from rules.feat_rules import general_feat_names
-from rules.ability_scores import calculate_ability_modifiers
+from rules.ability_scores import (
+    ability_score_maximums_for_class,
+    calculate_ability_modifiers,
+    DEFAULT_ABILITY_SCORE_MAXIMUM,
+)
 from rules.hit_points import (
     calculate_max_hit_points,
     ensure_hp_history,
@@ -187,6 +191,14 @@ def apply_source_ability_adjustments(base_scores, background_bonuses, adjustment
             scores[ability] = min(maximum, before + int(amount or 0))
             source_bonuses[ability] += scores[ability] - before
     return scores, source_bonuses
+
+
+def ability_score_maximums(character, class_data):
+    class_name = class_data.get("name", character.get("class", ""))
+    level = character.get("level", 1)
+    maximums = {ability: DEFAULT_ABILITY_SCORE_MAXIMUM for ability in ABILITIES}
+    maximums.update(ability_score_maximums_for_class(class_name, level))
+    return maximums
 
 
 def class_feature_ability_adjustments(character, class_data):

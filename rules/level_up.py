@@ -3,6 +3,7 @@ import json
 from copy import deepcopy
 from uuid import uuid4
 
+from rules.ability_scores import ability_score_maximums_for_class
 from rules.choice_validation import (
     ability_adjustment_from_asi,
     ability_adjustment_from_feat,
@@ -404,7 +405,10 @@ def resolved_choice_is_valid_for_character(character, plan, choice, data=None):
         return True
     value = choice.get("value", {})
     if choice.get("type") == "asi_or_feat" and value.get("mode") == "asi":
-        return validate_asi_selection(character, value).get("ok", False)
+        class_name = plan.get("class_name", character.get("class", ""))
+        target_level = normalize_level(plan.get("target_level", character.get("level", 1)))
+        maximum = ability_score_maximums_for_class(class_name, target_level)
+        return validate_asi_selection(character, value, maximum).get("ok", False)
     if value.get("mode") != "feat":
         return False
     if not data:
@@ -858,6 +862,10 @@ def enrich_level_choice(choice, character, class_data, target_level, data):
         **choice,
         "name": "Ability Score Improvement or general feat" if choice.get("type") == "asi_or_feat" else choice.get("name", "Feat"),
         "ability_scores": dict(character.get("ability_scores", {})),
+        "ability_score_maximums": ability_score_maximums_for_class(
+            class_data.get("name", choice.get("source", "")),
+            target_level,
+        ),
         "skill_proficiencies": list(character.get("skill_proficiencies", [])),
         "expertise": list(character.get("expertise", [])),
         "saving_throw_proficiencies": list(character.get("saving_throw_proficiencies", [])),
@@ -972,6 +980,7 @@ def asi_or_feat_value_is_valid(choice, value):
         return validate_asi_selection(
             {"ability_scores": choice.get("ability_scores", {})},
             value,
+            choice.get("ability_score_maximums") or {},
         )["ok"]
     if value.get("mode") != "feat":
         return False
