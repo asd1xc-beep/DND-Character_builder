@@ -1224,6 +1224,12 @@ def recalculate_hit_points(character, class_data, species_data):
     maximum_hp += subclass_hit_point_bonus(character, class_data)
     if has_general_feat(character, "Boon of Fortitude"):
         maximum_hp += 40
+    calculated_maximum_hp = maximum_hp
+    maximum_hp_adjustment = int(
+        (character.get("import_overrides", {}) or {}).get("maximum_hp_adjustment", 0)
+        or 0
+    )
+    maximum_hp = max(1, maximum_hp + maximum_hp_adjustment)
     previous = character.get("hit_points", {})
     previous_max = int(previous.get("max", previous.get("maximum", maximum_hp)) or 0)
     previous_current = int(previous.get("current", maximum_hp) or 0)
@@ -1240,6 +1246,11 @@ def recalculate_hit_points(character, class_data, species_data):
         "current": max(0, current_hp),
         "temporary": int(previous.get("temporary", 0) or 0),
         "hit_die": hit_die_label(hit_die),
+    }
+    character["hit_point_details"] = {
+        "calculated_before_import_adjustment": calculated_maximum_hp,
+        "import_adjustment": maximum_hp_adjustment,
+        "maximum": maximum_hp,
     }
     if class_name:
         character.setdefault("hit_dice", {})[class_name] = character["level"]

@@ -26,6 +26,10 @@ The first setup on a new computer needs internet access so Python can install th
 - Supports manual scores, standard array assignment, and rolled score assignment.
 - Supports subclass selection, class and subclass features, ASI or general feat choices, spell choices during level up, weapon mastery choices, and editable local save/load.
 - Generates a sheet-ready summary and an editable WotC-style PDF export.
+- Imports builder-generated PDFs losslessly through an embedded, checksummed
+  schema-5 JSON payload.
+- Recovers compatible older editable PDFs through an explicit reconciliation
+  review without changing the active character until confirmation.
 - Shows feature and spell descriptions on the final sheet view so the player can read what their character can do.
 
 ## Automated Choices
@@ -99,6 +103,36 @@ The tests cover representative builds, level-up drafts, subclass rules, spell an
 
 For release verification, the tests also build level 20 sheets for every imported class/subclass path, round-trip characters through save/load migration, verify audit expected-value checkpoints, and check that the portable zip excludes generated/local-only files.
 
+## PDF Import and Round Trip
+
+Use **Save / Load > Import editable PDF**.
+
+- PDFs exported by this builder contain
+  `dnd-character-builder-state.json`. The attachment uses a versioned JSON
+  envelope, a SHA-256 checksum, and a snapshot of builder-owned visible PDF
+  fields. These imports preserve the canonical character state exactly.
+- Older editable PDFs using the supported WotC-style template open a review
+  wizard. Confirm recovered identity, ability baseline, choices, spells,
+  equipment, and maximum HP before adoption.
+- Visible calculated values are comparison evidence. They never silently
+  overwrite structured character choices.
+- Unmodeled safe scalar fields such as alignment, backstory, appearance, and
+  currency are preserved for later PDF exports. Builder-owned calculated
+  fields always take precedence.
+- Import does not automatically create or overwrite a JSON save. Use
+  **Save Character** after reviewing the adopted character.
+
+The active character is replaced only after the detached candidate has
+successfully migrated, recalculated, and passed current-state validation.
+Confirmed adoption clears stale character widgets and level-up drafts, opens
+the Character Sheet tab, and records import provenance. Level up stays disabled
+until the imported state and normal character validation are complete.
+
+For safety, the importer rejects malformed, encrypted, oversized, flattened,
+unrelated, checksum-failing, or unsupported PDFs with an actionable error.
+Raw PDF bytes, upload paths, Streamlit widget state, and active level-up drafts
+are never stored in character JSON.
+
 ## Portable Zip
 
 Build a fresh portable source zip with:
@@ -108,3 +142,7 @@ Build a fresh portable source zip with:
 ```
 
 The zip excludes `.venv`, `.tmp`, temporary folders, generated PDFs, saved character JSON files, test caches, and older zip files. It includes the setup/start shortcuts and the local imported rules data needed to run the app after installing dependencies.
+
+It also includes the editable PDF template and all import/reconciliation
+modules. Generated character PDFs and imported/saved character data remain
+local and are intentionally excluded from the portable source package.

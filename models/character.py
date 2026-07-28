@@ -6,7 +6,7 @@ ABILITIES = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", 
 
 
 DEFAULT_CHARACTER = {
-    "schema_version": 4,
+    "schema_version": 5,
     "character_id": "",
     "name": "",
     "level": 1,
@@ -95,6 +95,11 @@ DEFAULT_CHARACTER = {
         "featured_cantrip": "",
         "weapon_wielding_modes": {}
     },
+    "import_provenance": {},
+    "import_overrides": {
+        "maximum_hp_adjustment": 0
+    },
+    "pdf_passthrough_fields": {},
     "hit_points": {
         "max": 0,
         "maximum": 0,

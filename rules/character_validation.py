@@ -194,6 +194,17 @@ def build_validation_report(character, class_data=None, species_data=None, backg
         warnings.append("Savage Attacker is tracked as a feature; attack reroll workflow is not automated")
     if "Tavern Brawler" in feats:
         warnings.append("Tavern Brawler is tracked as a feature; unarmed strike/combat workflow is not automated")
+    maximum_hp_adjustment = int(
+        (character.get("import_overrides", {}) or {}).get(
+            "maximum_hp_adjustment", 0
+        )
+        or 0
+    )
+    if maximum_hp_adjustment:
+        sign = "+" if maximum_hp_adjustment > 0 else ""
+        warnings.append(
+            f"Imported maximum HP adjustment: {sign}{maximum_hp_adjustment}"
+        )
 
     return {
         "complete": not missing and not unsupported,

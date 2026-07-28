@@ -7,11 +7,17 @@ from uuid import uuid4
 from models.character import DEFAULT_CHARACTER, merge_unique
 from rules.mystic_arcanum import migrate_legacy_mystic_arcanum
 from services.equipment_state import migrate_legacy_equipment
+from services.pdf_passthrough import normalize_pdf_passthrough_fields
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 SAVE_DIR = ROOT_DIR / "output" / "saved_characters"
-CURRENT_SCHEMA_VERSION = 4
+CURRENT_SCHEMA_VERSION = 5
+TRANSIENT_CHARACTER_KEYS = {
+    "level_up_draft",
+    "pdf_import_draft",
+    "_pending_current_hp_increase",
+}
 
 
 def safe_filename(name):
@@ -22,9 +28,9 @@ def safe_filename(name):
 def save_character(character):
     SAVE_DIR.mkdir(parents=True, exist_ok=True)
     path = SAVE_DIR / f"{safe_filename(character.get('name', ''))}.json"
-    character = migrate_character(character)
     with path.open("w", encoding="utf-8") as file:
-        json.dump(character, file, indent=2)
+        file.write(serialize_character(character, pretty=True))
+        file.write("\n")
     return path
 
 
@@ -36,6 +42,38 @@ def list_saved_characters():
 def load_character(path):
     with Path(path).open("r", encoding="utf-8") as file:
         return migrate_character(json.load(file))
+
+
+def canonical_character(character):
+    """Return detached, migrated JSON character state without session transients."""
+    return strip_transient_character_state(migrate_character(deepcopy(character or {})))
+
+
+def serialize_character(character, *, pretty=False):
+    """Serialize the canonical character state for saves and embedded exports."""
+    canonical = canonical_character(character)
+    if pretty:
+        return json.dumps(canonical, ensure_ascii=False, indent=2, sort_keys=True)
+    return json.dumps(
+        canonical,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+
+
+def strip_transient_character_state(value):
+    if isinstance(value, dict):
+        return {
+            key: strip_transient_character_state(item)
+            for key, item in value.items()
+            if key not in TRANSIENT_CHARACTER_KEYS
+            and key != "path"
+            and not key.endswith("_path")
+        }
+    if isinstance(value, list):
+        return [strip_transient_character_state(item) for item in value]
+    return deepcopy(value)
 
 
 def migrate_character(saved_character):
@@ -55,9 +93,58 @@ def migrate_character(saved_character):
     migrate_legacy_equipment(migrated, saved_character)
     if migrated.get("class") == "Warlock":
         migrate_legacy_mystic_arcanum(migrated)
+    migrated["import_provenance"] = migrate_import_provenance(
+        migrated.get("import_provenance")
+    )
+    migrated["import_overrides"] = migrate_import_overrides(
+        migrated.get("import_overrides")
+    )
+    migrated["pdf_passthrough_fields"] = normalize_pdf_passthrough_fields(
+        migrated.get("pdf_passthrough_fields")
+    )
     migrated.setdefault("schema_version", CURRENT_SCHEMA_VERSION)
     migrated["schema_version"] = CURRENT_SCHEMA_VERSION
     return migrated
+
+
+def migrate_import_provenance(value):
+    if not isinstance(value, dict):
+        return {}
+    allowed_scalar_keys = {
+        "source_kind",
+        "payload_version",
+        "template_signature",
+        "imported_at",
+        "status",
+        "ability_history_reconstructed",
+        "hp_history_reconstructed",
+    }
+    provenance = {
+        key: deepcopy(item)
+        for key, item in value.items()
+        if key in allowed_scalar_keys
+        and isinstance(item, (str, int, float, bool))
+    }
+    warnings = value.get("warnings", [])
+    if isinstance(warnings, list):
+        provenance["warnings"] = [
+            str(warning)
+            for warning in warnings
+            if isinstance(warning, (str, int, float, bool))
+        ]
+    return provenance
+
+
+def migrate_import_overrides(value):
+    value = value if isinstance(value, dict) else {}
+    adjustment = value.get("maximum_hp_adjustment", 0)
+    if isinstance(adjustment, bool):
+        adjustment = 0
+    try:
+        adjustment = int(adjustment)
+    except (TypeError, ValueError):
+        adjustment = 0
+    return {"maximum_hp_adjustment": adjustment}
 
 
 def migrate_legacy_wizard_spellbook(character, saved_character):

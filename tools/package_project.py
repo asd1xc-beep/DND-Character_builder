@@ -24,7 +24,7 @@ EXCLUDED_DIRS = {
     "outputs",
     "tmp",
 }
-EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".log", ".zip"}
+EXCLUDED_SUFFIXES = {".patch", ".pyc", ".pyo", ".log", ".zip"}
 KEEP_OUTPUT_FILES = {
     Path("output/pdf/.gitkeep"),
     Path("output/packages/.gitkeep"),
