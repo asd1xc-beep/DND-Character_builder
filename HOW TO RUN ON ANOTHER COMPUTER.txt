@@ -13,3 +13,11 @@ The first setup needs internet access so Python can install the app packages.
 After that, use "Start Character Builder.cmd" whenever you want to open the app.
 
 Keep the command window open while using the app. Close that window when you want to stop it.
+
+The portable package includes the editable character-sheet template and local
+rules data. Your generated PDFs and saved characters are not bundled into the
+portable zip; copy those separately if you want them on the other computer.
+
+Builder-generated PDFs can be imported losslessly from the Save / Load tab.
+Compatible older editable PDFs require review before they replace the working
+character. Importing never saves a JSON character automatically.

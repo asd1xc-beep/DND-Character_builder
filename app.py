@@ -31,6 +31,7 @@ from rules.ability_assignment import normalize_score_assignments, swap_score_ass
 from rules.ability_generation import STANDARD_ARRAY, roll_ability_scores
 from rules.ability_scores import ability_score_maximums_for_class, format_modifier
 from rules.character_validation import build_validation_report
+from rules.import_reconciliation import level_up_safety_report
 from rules.class_choice_rules import (
     LANGUAGE_OPTIONS,
     battle_master_maneuver_total,
@@ -118,6 +119,7 @@ from ui.compact_choice import render_compact_multi_choice, render_compact_single
 from ui.equipment_browser import render_equipment_browser
 from ui.medium_option_browser import BrowserFilter, render_medium_option_browser, render_medium_single_option_browser
 from ui.pdf_export_options import render_pdf_export_options
+from ui.pdf_import import render_import_handoff_summary, render_pdf_import
 from ui.subclass_choice import render_subclass_choice
 
 
@@ -2118,7 +2120,7 @@ def main():
     class_data = data["classes_by_name"].get(character.get("class"), {})
     recalculate_character(character, data)
 
-    tabs = st.tabs([
+    tab_labels = [
         "Basic Info",
         "Species",
         "Background",
@@ -2131,7 +2133,14 @@ def main():
         "Level Up",
         "Character Sheet",
         "Save / Load",
-    ])
+    ]
+    requested_tab = st.session_state.pop(
+        "requested_builder_tab",
+        "Basic Info",
+    )
+    if requested_tab not in tab_labels:
+        requested_tab = "Basic Info"
+    tabs = st.tabs(tab_labels, default=requested_tab)
 
     with tabs[0]:
         left, right = st.columns([2, 1])
@@ -3100,6 +3109,13 @@ def main():
 
     with tabs[9]:
         recalculate_character(character, data)
+        level_up_gate = level_up_safety_report(character, data)
+        if not level_up_gate["safe"]:
+            st.warning(
+                "Level up is unavailable until the current character is complete."
+            )
+            for blocker in level_up_gate["blockers"]:
+                st.write(f"- {blocker}")
         current_level = character.get("level", 1)
         st.metric("Current level", current_level)
         next_level = current_level + 1
@@ -3120,7 +3136,12 @@ def main():
                 draft = None
 
             if not draft:
-                if st.button("Start level up", type="primary", icon=":material/play_arrow:"):
+                if st.button(
+                    "Start level up",
+                    type="primary",
+                    icon=":material/play_arrow:",
+                    disabled=not level_up_gate["safe"],
+                ):
                     st.session_state.level_up_draft = create_level_up_draft(character, target_level, data)
                     st.rerun()
                 st.info("Start a level-up draft to preview changes and make required choices.")
@@ -3179,7 +3200,11 @@ def main():
                         "Finalize level up",
                         type="primary",
                         icon=":material/arrow_upward:",
-                        disabled=not draft["can_finalize"] or not validation.get("ok", False),
+                        disabled=(
+                            not level_up_gate["safe"]
+                            or not draft["can_finalize"]
+                            or not validation.get("ok", False)
+                        ),
                     ):
                         result = commit_level_up_draft(character, draft, data)
                         if result["ok"]:
@@ -3204,6 +3229,9 @@ def main():
 
     with tabs[10]:
         recalculate_character(character, data)
+        render_import_handoff_summary(
+            st.session_state.pop("pdf_import_handoff_summary", None)
+        )
         validation = build_validation_report(
             character,
             data["classes_by_name"].get(character.get("class"), {}),
@@ -3325,7 +3353,10 @@ def main():
             )
             if validation["complete"]:
                 if st.button("Create Editable PDF"):
-                    path = export_character_pdf(build_character_sheet(character, data))
+                    path = export_character_pdf(
+                        build_character_sheet(character, data),
+                        character=character,
+                    )
                     st.success(f"Created {path}")
                     with path.open("rb") as file:
                         st.download_button(
@@ -3350,6 +3381,7 @@ def main():
                     st.session_state.character = load_character(selected_path)
                     st.session_state.level_up_draft = None
                     st.rerun()
+        render_pdf_import(data)
 
 
 if __name__ == "__main__":

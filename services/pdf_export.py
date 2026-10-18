@@ -1,3 +1,4 @@
+from io import BytesIO
 from pathlib import Path
 from textwrap import fill
 
@@ -11,6 +12,8 @@ from pypdf import PdfReader, PdfWriter
 from pypdf.generic import BooleanObject, NameObject
 
 from services.save_load import safe_filename
+from services.pdf_passthrough import normalize_pdf_passthrough_fields
+from services.pdf_roundtrip import payload_envelope_bytes
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -73,23 +76,95 @@ WOTC_SLOT_FIELDS = {
 }
 
 
-def export_character_pdf(sheet):
+def export_character_pdf(sheet, character=None):
     PDF_DIR.mkdir(parents=True, exist_ok=True)
     name = sheet.get("identity", {}).get("name") or "unnamed_character"
     path = PDF_DIR / f"{safe_filename(name)}_character_sheet.pdf"
     if WOTC_TEMPLATE.exists():
-        fill_wotc_template(sheet, path)
+        fill_wotc_template(
+            sheet,
+            path,
+            passthrough_fields=(
+                character.get("pdf_passthrough_fields", {})
+                if isinstance(character, dict)
+                else {}
+            ),
+        )
     else:
         create_editable_character_pdf(sheet, path)
+    if character is not None:
+        attach_builder_state(path, character, builder_owned_field_snapshot(sheet))
     return path
 
 
-def fill_wotc_template(sheet, path, template_path=WOTC_TEMPLATE):
+def attach_builder_state(path, character, field_snapshot):
+    reader = PdfReader(BytesIO(Path(path).read_bytes()))
+    writer = PdfWriter()
+    writer.clone_document_from_reader(reader)
+    writer.add_attachment(
+        "dnd-character-builder-state.json",
+        payload_envelope_bytes(character, field_snapshot),
+    )
+    output = BytesIO()
+    writer.write(output)
+    Path(path).write_bytes(output.getvalue())
+    return path
+
+
+def builder_owned_field_snapshot(sheet):
+    if WOTC_TEMPLATE.exists():
+        return build_wotc_field_values(sheet)
+    return fallback_field_values(sheet)
+
+
+def fallback_field_values(sheet):
+    ability = {item["name"]: item for item in sheet.get("abilities", [])}
+    return {
+        "character_name": sheet.get("identity", {}).get("name", ""),
+        "class_level": (
+            f"{sheet.get('identity', {}).get('class', '')} "
+            f"{sheet.get('identity', {}).get('level', 1)}"
+        ).strip(),
+        "background": sheet.get("identity", {}).get("background", ""),
+        "species": sheet.get("identity", {}).get("species", ""),
+        "size": sheet.get("identity", {}).get("size", ""),
+        "speed": f"{sheet.get('identity', {}).get('speed', 30)} ft",
+        "proficiency_bonus": sheet.get("core_stats", {}).get("proficiency_bonus_display", ""),
+        "initiative": sheet.get("core_stats", {}).get("initiative_display", ""),
+        "armor_class": str(sheet.get("core_stats", {}).get("armor_class", "")),
+        "max_hp": str(sheet.get("core_stats", {}).get("hit_points", {}).get("max", "")),
+        "current_hp": str(sheet.get("core_stats", {}).get("hit_points", {}).get("current", "")),
+        "hit_die": sheet.get("core_stats", {}).get("hit_die", ""),
+        **{
+            f"ability_{slug(name)}_score": str(details.get("score", ""))
+            for name, details in ability.items()
+        },
+        **{
+            f"ability_{slug(name)}_mod": details.get("modifier_display", "")
+            for name, details in ability.items()
+        },
+    }
+
+
+def fill_wotc_template(
+    sheet,
+    path,
+    template_path=WOTC_TEMPLATE,
+    passthrough_fields=None,
+):
     reader = PdfReader(str(template_path))
     writer = PdfWriter()
     writer.clone_reader_document_root(reader)
 
-    field_values = build_wotc_field_values(sheet)
+    available_fields = set((reader.get_fields() or {}).keys())
+    field_values = {
+        field_name: value
+        for field_name, value in normalize_pdf_passthrough_fields(
+            passthrough_fields
+        ).items()
+        if field_name in available_fields
+    }
+    field_values.update(build_wotc_field_values(sheet))
     for page in writer.pages:
         writer.update_page_form_field_values(page, field_values, auto_regenerate=False)
 

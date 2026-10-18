@@ -41,6 +41,11 @@ def test_portable_package_excludes_generated_and_local_only_files(tmp_path):
 
     assert "app.py" in names
     assert "requirements.txt" in names
+    assert "rules/import_reconciliation.py" in names
+    assert "services/pdf_import.py" in names
+    assert "services/pdf_roundtrip.py" in names
+    assert "ui/pdf_import.py" in names
+    assert "templates/pdf/5E_CharacterSheet_Fillable.pdf" in names
     assert "Start Character Builder.cmd" in names
     assert "Setup First Time.cmd" in names
     assert "data/imported/5etools/classes.json" in names
@@ -50,6 +55,7 @@ def test_portable_package_excludes_generated_and_local_only_files(tmp_path):
     assert not any(name.startswith("output/pdf/") and not name.endswith(".gitkeep") for name in names)
     assert not any(name.startswith("output/saved_characters/") and name.endswith(".json") for name in names)
     assert not any(name.endswith(".zip") for name in names)
+    assert not any(name.endswith(".patch") for name in names)
 
 
 def release_character(class_name, subclass_name):
